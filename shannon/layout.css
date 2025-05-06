@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/press-start-2p');
+ @import url('https://fonts.cdnfonts.com/css/standard-galactic-alphabet-hand');
+
+                
+
+html{
+	background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+}
+
+body{
+	width: 800px;
+	background-color: LightGrey;
+	margin: auto;
+	color: #000000;
+	padding: 20px;
+	font-family: 'Pixelify Sans', sans-serif;                            
+	font-size: 20px;
+}
+
+header{
+	background-color: White;
+	padding: 6px;
+	background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+    background-repeat: repeat;
+}
+
+header h1{
+	margin: 10px 0px;
+    font-family: 'Press Start 2P', sans-serif;
+	font-size: 55px;
+	text-align: center;
+	color: white;
+	padding-bottom: 5px
+}
+
+header img{
+	width: 100%;
+	padding: 0;
+}
+
+
+	
+section{
+	margin-bottom: 40px;
+}
+
+img{
+	width: 400px;
+	border: 1px Plum;
+	padding: 5px;
+	border-radius: 20px;
+
+}
+
+.sectionLink{
+	font-family: 'Pixelify Sans', sans-serif;
+	font-size: 0.9em;
+}
+
+footer{
+	background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+	padding: 10px 5px;
+}
+
+footer p{
+	margin: 0px;
+	font-family: 'Pixelify Sans', sans-serif;
+	color: white;
+	padding: 1px 20px;
+}
+
+/* Navigations ===========================================================*/
+
+
+ nav  {
+  height:20px;
+ 
+ } 
+
+ nav  ul {
+  list-style:none;
+  margin:0;
+  padding: 0; 
+ } 
+
+ nav  ul li a { 
+  text-decoration:none;
+  float:left;
+  margin-right:5px;
+  font-size: 1.0em;
+  color: black;
+
+  border:2px solid white;
+  border-bottom:none;
+  border-right: none;
+
+  width:190.51px;
+  text-align:center;
+  display:block;
+  background:grey;
+
+  -moz-border-radius-topleft:15px;
+  -moz-border-radius-topright:15px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px; 
+ } 
+
+ nav  ul li a:hover {
+  background:lightgrey;
+  color:#FFF;
+  text-shadow:1px 1px 1px #000;
+ } 
+ 
+ 
+ 
+ /* Dropdown ===========================================================*/
+ 
+li a, .dropbtn {
+  text-decoration:none;
+  float:left;
+  margin-right:5px;
+  font-size: 1.0em;
+  color: black;
+
+  border:2px solid white;
+  border-bottom:none;
+  border-right: none;
+
+  width:190.51px;
+  text-align:center;
+  display:block;
+  background:grey;
+
+  -moz-border-radius-topleft:15px;
+  -moz-border-radius-topright:15px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px; 
+ } 
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background: lightgrey;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #000;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #eeeeee;
+  min-width: 192px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+  width: 169px;
+  margin-top: 1px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 9px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: 158px;
+}
+
+.dropdown-content a:hover {background-color: lightgrey;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.area__element:hover .area__title{
+  visibility: initial;
+}
+
+.area__title--right{
+  top: .5em;
+  right: .5em;
+}
+
+.area__title--left{
+  bottom: .5em;
+  left: .5em;  
+}
+
+
+ /* Dropdown ===========================================================*/
+
+.pixelify-sans-<uniquifier> {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* 
+font-family: 'Standard Galactic Alphabet Hand', sans-serif;  
+font-family: "Pixelify Sans", sans-serif;
+font-family: 'Press Start 2P', sans-serif;
+*/
+
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*=========design page========*/
+
+html.design{
+	background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*eGHIz7MqdP_tUGGVNnDfWA.jpeg")
+}
+
+.design body{
+	width: 800px;
+	background-color: #FFFFFF;
+	margin: auto;
+	color: #000000;
+	padding: 20px;
+	font-family: 'Pixelify Sans', sans-serif;                            
+	font-size: 20px;
+}
+
+img.design{
+	width: 160px;
+	height: 240px;
+}
+
+
+/*=========pix page========*/
+
+html.pix{
+	background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*eGHIz7MqdP_tUGGVNnDfWA.jpeg")
+}
+
+
+div.pix_col{
+	width: 750px;
+	height: 100px;
+	float: right;
+    margin-top: 2px;
+}
+
+div.pix_col1{
+	float: left;
+	width: 160px;
+	height: 240px;
+}
+
+.pix_col img {
+    width: 55px;
+	margin-bottom: 6px;
+}
+
+div.pix_col2{
+	float: left;
+	width: 200px;
+	height: 240px;
+}
+
+.pix_col2 img {
+    width: 55px;
+}
+
+
+.clear{
+	clear:both;
+}
+
+
+
+
+/* testing */
+@media screen and (max-width:1024px) {
+	body{
+		width: 100%;
+	}
+	
+	nav  ul li a { 
+		text-decoration:none;
+		float:left;
+		margin-right:5px;
+		font-size: 1.0em;
+		color: black;
+
+		border:2px solid white;
+		border-bottom:none;
+		border-right: none;
+
+		width:30%;
+		text-align:center;
+		display:block;
+		background:grey;
+
+		-moz-border-radius-topleft:15px;
+		-moz-border-radius-topright:15px;
+		-webkit-border-top-left-radius:5px;
+		-webkit-border-top-right-radius:5px; 
+	} 
+
+	li a, .dropbtn {
+		text-decoration:none;
+		float:left;
+		margin-right:5px;
+		font-size: 1.0em;
+		color: black;
+
+		border:2px solid white;
+		border-bottom:none;
+		border-right: none;
+
+		width:100%;
+		text-align:center;
+		display:block;
+		background:grey;
+
+		-moz-border-radius-topleft:15px;
+		-moz-border-radius-topright:15px;
+		-webkit-border-top-left-radius:5px;
+		-webkit-border-top-right-radius:5px; 
+	} 
+
+}
