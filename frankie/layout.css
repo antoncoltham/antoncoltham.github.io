@@ -1,0 +1,33 @@
+html{
+	background-color: PowderBlue;
+}
+
+body{
+	width: 800px;
+	background-color: FloralWhite;
+	margin: auto;
+	padding: 20px;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #696969
+}
+
+h1, h2{
+	font-family: Georgia, serif;
+	color: LightSkyBlue;
+}
+
+
+
+section{
+	margin-bottom: 40px;
+}
+
+img{
+	width: 170px;
+	border: 1px solid Grey;
+	padding: 5px;
+	border-radius:20px;
+}
+
+
+		
