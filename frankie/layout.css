@@ -40,8 +40,8 @@ ul {
 
 li {
   float: left;
-  border: 1px solid black;
-  border-right: none;
+  border: 1px solid black; /* <=================== */
+  border-right: none; /* <=================== */
 }
 
 li a {
@@ -52,9 +52,9 @@ li a {
   text-decoration: none;
 }
 
-li:last-child {
-  border-right: 1px solid black;
-  width:120px;
+li:last-child { /* <=================== */
+  border-right: 1px solid black; /* <=================== */
+  width:120px; /* <=================== */
 }
 
 li a:hover:not(.active) {
