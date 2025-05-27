@@ -101,63 +101,37 @@ html#reference{
 
 /*============NAVAGATION==============*/
 
-#water ul {
+ul {
   list-style-type: none; /* turn off bullet points */
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+#water ul {
   background-color: Teal;
 }
 
 #home ul {
-  list-style-type: none; /* turn off bullet points */
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   background-color: LightBlue;
 }
 
 #air ul {
-  list-style-type: none; /* turn off bullet points */
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   background-color: BurlyWood;
 }
 
 #land ul {
-  list-style-type: none; /* turn off bullet points */
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   background-color: LightGreen;
 }
 
 #help ul {
-  list-style-type: none; /* turn off bullet points */
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   background-color: ForestGreen;
 }
 
-#reference ul {
-  list-style-type: none; /* turn off bullet points */
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
- /* background-color: HotPink;*/
-}
 #reference ul li {
  background-color: HotPink;
 }
 
- /* list-style-type: none; /* turn off bullet points 
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: PowderBlue;
-}*/
 
 ul li {
   float: left;
