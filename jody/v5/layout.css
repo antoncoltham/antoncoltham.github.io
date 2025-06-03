@@ -19,7 +19,7 @@ body {
 /* ---- Style for page header ---- */
 
 header {
-	background:sky light blue ;
+	/*background:sky light blue ;*/
 	background-image: url("banner.png");
 	background-repeat: no-repeat;
 	
