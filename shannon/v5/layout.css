@@ -343,23 +343,23 @@ html.design{
 	border-radius: 20px;
 }
 
-/*=========light page========*/
+/*=========light and glow page========*/
 
 .light body{
-	width: 800px;
+	width: 100%; /*800px;*/
 	background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
-	margin-left: 65px;
-	margin-right: 65px;
+	margin-left: 0px; /*65px;*/
+	margin-right: 0px; /*65px;*/
 	color: #000000;
-	padding: 20px;
+	padding: 0px;
 	font-family: 'Pixelify Sans', sans-serif;                            
 	font-size: 20px;
 }
 
 .light img {
-    width: 1350px;
-	border: 1px Plum;
-	padding: 1px;
+    width: 100%; /*1350px;*/
+	border: 0px Plum;
+	padding: 0px;
 	border-radius: 1px;
 }
 
