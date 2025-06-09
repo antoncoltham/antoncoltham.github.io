@@ -20,7 +20,8 @@ header{
 }
 
 header h1{
-	margin: 20px 5px;
+	display: none;
+	/*margin: 20px 5px;*/
 }
 
 header img{
@@ -38,7 +39,9 @@ section{
 }
 
 section img{
-	width: 200px;
+	height: 200px;
+	display: block;
+	margin: auto;
 }
 
 .sectionLink{
