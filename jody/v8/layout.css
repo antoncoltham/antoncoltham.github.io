@@ -1,110 +1,131 @@
 
-html{
-	background-color: #9dd4ec;
-	background-image: url("images/bg.png")
-}	
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
-body{
-	width: 800px;
-	background-color: #91f1cb;
-	margin: auto;
-	padding: 20px;
-	font-family: Arial, Helvetica, sans-serif;
-	border: 5px Solid Green;
+/* ---- Style for entire screen ---- */
 
+html {
+	background:#a9cce3 ;
+}
+
+/* ---- Style for entire body ---- */
+
+body {
+	border:1px solid black; 
+	width:800px;
+	margin:0 auto; 
+	padding:0.5em;    
+	font-family: "Roboto Slab", serif;
+	background:#d4e6f1;
 	font-size: 1em;
 }
 
-header{
-		background-color: LightGrey;
-		border: 3px solid Green;
-		padding: 20px
-}
+/* ---- Style for page header ---- */
 
-header h1{
-	display: none;
-	/*margin: 20px 5px;*/
+header {
+	background:sky light blue ;
+	background-image: url("banner.png");
+	background-repeat: no-repeat;
+	
+
 }
 
 header img{
-	width: 100%;
+	width: 800px;
 }
 
-h1, h2, h3{
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
+/* ---- Style for page navigation ---- */
 
-
-
-section{
-	padding: 20px;
-}
-
-section img{
-	height: 200px;
-	display: block;
-	margin: auto;
-	border: 3px solid green;
-	padding: 5px;
-}
-
-.sectionLink{
-	font-style: italic;
-	font-size: 0.9em;
-}
-
-footer{
-	background-color: Skyblue;
-	padding: 10px 10px;
-	border: 3px solid green;
-	padding: 5px;
-}
-
-footer p{
-	margin: 0px;
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
-/*==========NAVIGATION==========*/
-nav{
-	background-color: Grey;
-	padding: 20px;
+nav {
+	background: sky light blue ;
+	padding-left: 0em;
+	padding-bottom: 10px;
 }
 
 nav a{
-	color: White;
+ 	font-size: 0.8em;
+	padding-right:0.8em;
+	color:sage green ;
 }
 
-nav ul {
+/* ---- Style for main section of body ---- */
+
+section{
+	margin:10px 0 10px 0px; 
+}
+
+section img{
+    width: 386px;
+	height: 200px;
+	border:1px solid black; 
+	padding: 5px;
+	
+}
+
+
+/* ---- Style for page footer ---- */
+
+footer {
+	height:30px;
+	background: sky light blue;
+	
+}
+
+footer p{
+	font-family: "Roboto Slab", serif;
+	font-size: 0.8em;
+	padding-top:10px;
+	margin:10px 0 0 10px;
+	color:sage green ;
+}
+/*=========== Navigation ===============*/
+
+nav ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #7fb3d5 ;
 }
 
-nav li {
+nav ul li {
   float: left;
-  border: 1px solid lightblue;
-  width: 177px;
+  border:1px solid white;
+  width:131px;
+  
 }
 
-nav li a {
+nav ul li:last-child{
+	width:135px;
+	
+
+}
+
+nav ul li a {
   display: block;
   color: white;
+  text-shadow: 1px 1px black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-nav li a:hover:not(.active) {
-  background-color: LightGrey;
-  color:black;
+ul li a:hover {
+  background-color: #111;
+  
+}
+.current{
+background-color:#a3e4d7;
 }
 
-.open_page {
-  background-color: #04AA6D;
-}
+nav ul li.current a {
+	color: black;
+	text-shadow: 1px 1px white; }
 
-ol li{
-	margin-bottom: 12px;
-}
+  
+
+section ul li{margin-bottom: 15px;}
+
+
+
+
+
