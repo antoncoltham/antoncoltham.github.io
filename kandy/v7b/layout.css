@@ -1,5 +1,7 @@
 html{
 	background-color: aqua;
+	background-image: url(images/bg5.png);
+	  background-size: 100% 100%;
 }	
 
 body{
