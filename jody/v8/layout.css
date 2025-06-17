@@ -1,0 +1,110 @@
+
+html{
+	background-color: #9dd4ec;
+	background-image: url("images/bg.png")
+}	
+
+body{
+	width: 800px;
+	background-color: #91f1cb;
+	margin: auto;
+	padding: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 5px Solid Green;
+
+	font-size: 1em;
+}
+
+header{
+		background-color: LightGrey;
+		border: 3px solid Green;
+		padding: 20px
+}
+
+header h1{
+	display: none;
+	/*margin: 20px 5px;*/
+}
+
+header img{
+	width: 100%;
+}
+
+h1, h2, h3{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+
+
+section{
+	padding: 20px;
+}
+
+section img{
+	height: 200px;
+	display: block;
+	margin: auto;
+	border: 3px solid green;
+	padding: 5px;
+}
+
+.sectionLink{
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+footer{
+	background-color: Skyblue;
+	padding: 10px 10px;
+	border: 3px solid green;
+	padding: 5px;
+}
+
+footer p{
+	margin: 0px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+/*==========NAVIGATION==========*/
+nav{
+	background-color: Grey;
+	padding: 20px;
+}
+
+nav a{
+	color: White;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav li {
+  float: left;
+  border: 1px solid lightblue;
+  width: 177px;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+  background-color: LightGrey;
+  color:black;
+}
+
+.open_page {
+  background-color: #04AA6D;
+}
+
+ol li{
+	margin-bottom: 12px;
+}
