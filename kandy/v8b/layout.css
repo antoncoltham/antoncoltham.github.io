@@ -91,7 +91,6 @@ nav li {
 
 nav li:last-child {
   border-right: none;
-  /*width: 177px;*/
 }
 
 nav li a {
