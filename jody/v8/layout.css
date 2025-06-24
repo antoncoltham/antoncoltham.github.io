@@ -1,131 +1,143 @@
-
+/* ---- Import custom font from Google Fonts ---- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
-/* ---- Style for entire screen ---- */
+/* ========== GENERAL PAGE STYLING ========== */
 
+/* ---- Style for the entire page (html element) ---- */
 html {
-	background:#a9cce3 ;
+	background: #a9cce3; /* Light blue background for the whole screen */
 }
 
-/* ---- Style for entire body ---- */
-
+/* ---- Style for the page body ---- */
 body {
-	border:1px solid black; 
-	width:800px;
-	margin:0 auto; 
-	padding:0.5em;    
-	font-family: "Roboto Slab", serif;
-	background:#d4e6f1;
+	border: 1px solid black; /* Optional border around the content */
+	width: 800px; /* Fixed content width */
+	margin: 0 auto; /* Center the content horizontally */
+	padding: 0.5em; /* Padding inside the body */
+	font-family: "Roboto Slab", serif; /* Uses imported font */
+	background: #d4e6f1; /* Light background behind body content */
 	font-size: 1em;
 }
 
-/* ---- Style for page header ---- */
 
+/* ========== HEADER SECTION ========== */
+
+/* ---- Header background styling ---- */
 header {
-	background:sky light blue ;
+	background: skyblue; 
 	background-image: url("banner.png");
 	background-repeat: no-repeat;
-	
-
 }
 
-header img{
+/* ---- Header image (fallback if background-image doesn't load) ---- */
+header img {
 	width: 800px;
 }
 
-/* ---- Style for page navigation ---- */
 
+/* ========== NAVIGATION BAR ========== */
+
+/* ---- Outer nav container styling ---- */
 nav {
-	background: sky light blue ;
+	background: skyblue;
 	padding-left: 0em;
 	padding-bottom: 10px;
 }
 
-nav a{
- 	font-size: 0.8em;
-	padding-right:0.8em;
-	color:sage green ;
+/* ---- Base link styling in nav bar ---- */
+nav a {
+	font-size: 0.8em;
+	padding-right: 0.8em;
+	color: sagegreen;
 }
 
-/* ---- Style for main section of body ---- */
 
-section{
-	margin:10px 0 10px 0px; 
+/* ========== MAIN SECTION STYLING ========== */
+
+/* ---- General section layout ---- */
+section {
+	margin: 10px 0;
 }
 
-section img{
-    width: 386px;
+/* ---- Styling for images inside the section ---- */
+section img {
+	width: 386px;
 	height: 200px;
-	border:1px solid black; 
+	border: 1px solid black;
 	padding: 5px;
-	
 }
 
 
-/* ---- Style for page footer ---- */
+/* ========== FOOTER SECTION ========== */
 
+/* ---- Basic footer background and height ---- */
 footer {
-	height:30px;
-	background: sky light blue;
-	
+	height: 30px;
+	background: skyblue;
 }
 
-footer p{
+/* ---- Footer text styling ---- */
+footer p {
 	font-family: "Roboto Slab", serif;
 	font-size: 0.8em;
-	padding-top:10px;
-	margin:10px 0 0 10px;
-	color:sage green ;
-}
-/*=========== Navigation ===============*/
-
-nav ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #7fb3d5 ;
+	padding-top: 10px;
+	margin: 10px 0 0 10px;
+	color: sagegreen;
 }
 
+
+/* ========== NAVIGATION BAR LIST BUTTON STYLING ========== */
+
+/* ---- Reset default list styling for nav ---- */
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #7fb3d5; /* Soft blue bar background */
+}
+
+/* ---- Each nav item styled as a block button ---- */
 nav ul li {
-  float: left;
-  border:1px solid white;
-  width:131px;
-  
+	float: left;
+	border: 1px solid white;
+	width: 131px;
 }
 
-nav ul li:last-child{
-	width:135px;
-	
-
+/* ---- Slightly wider last item to fit label ---- */
+nav ul li:last-child {
+	width: 135px;
 }
 
+/* ---- Link block styling inside nav items ---- */
 nav ul li a {
-  display: block;
-  color: white;
-  text-shadow: 1px 1px black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+	display: block;
+	color: white;
+	text-shadow: 1px 1px black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
 }
 
+/* ---- Hover effect on nav items ---- */
 ul li a:hover {
-  background-color: #111;
-  
-}
-.current{
-background-color:#a3e4d7;
+	background-color: #111; /* Dark background on hover */
 }
 
+/* ---- Current page button styling ---- */
+.current {
+	background-color: #a3e4d7; /* Light teal background */
+}
+
+/* ---- Current page link text styling ---- */
 nav ul li.current a {
 	color: black;
-	text-shadow: 1px 1px white; }
-
-  
-
-section ul li{margin-bottom: 15px;}
+	text-shadow: 1px 1px white;
+}
 
 
+/* ========== LIST ITEMS IN SECTION (e.g. bullet points) ========== */
 
-
-
+section ul li {
+	margin-bottom: 15px;
+}

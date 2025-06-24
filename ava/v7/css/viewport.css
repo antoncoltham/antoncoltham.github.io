@@ -3,49 +3,18 @@
 @media screen and (max-width: 1024px) {
     /* ----------------------- Content sections ----------------------- */
     section {
-        background-color: #6baaf77c;
-        height: 500px;
         width: 700px;
         margin: auto;
-        position: relative;
-        top: -100px;
-        z-index: -1;
-        border-radius: 40px;
-        margin-top: 140px;
-    }
+            }
 
-    p {
-        font-family: 'Gothic A1';
-        font-size: 20px;
-        color: #FFE81F;
-        font-weight: 700;
-        text-align: center;
-        float: right;
-    }
-
-    .text_right p {
-        font-family: 'Gothic A1';
-        font-size: 19px;
-        color: #FFE81F;
-        font-weight: 600;
-        text-align: center;
-        float: right;
-        margin-top: 0px;
-        margin-left: 17.5px;
-        margin-right: 17.5px;
-        margin-bottom: 14px;
-    }
 
     div.image_left {
-        margin-top: 50px;
-        float: left;
         margin-left: 30px;
     }
 
     div.text_right {
         margin-top: 50px;
         width: 400px;
-        float: right;
         margin-right: 30px;
     }
    
@@ -60,12 +29,10 @@
     }
 
     img#ep2poster {
-        width: 240px;
         height: fit-content;
     }
 
     img#ep3poster {
-        width: 240px;
         height: 365px;
     }
 
@@ -78,9 +45,6 @@
 
     /* ----------------------- Planet Map ----------------------- */
     .dropdown-content {
-        display: none;
-        position: absolute;
-        z-index: 100;
         width: 110%;
     }
 
@@ -89,16 +53,10 @@
         opacity: 1 !important;
         pointer-events: none;
         /* Making the popups always visable */
-        position: absolute;
         visibility: visible !important;
         display: block !important;
     }
 
-    div#ep1[data-tooltip]:after {
-	    left: 120px;
-        top: -40px;
-	    position: absolute;
-    }
 
     /* ----------------------- Popups ----------------------- */
     /* Arrow for Episode I popup (points left) */

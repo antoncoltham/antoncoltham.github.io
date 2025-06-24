@@ -1,4 +1,4 @@
-
+/* comment */
 html{
 	background-color: #9dd4ec;
 	background-image: url("images/bg.png")
@@ -42,7 +42,7 @@ section{
 
 section img{
 	height: 200px;
-	display: block;
+	display: block; /* this is needed to centre the image */
 	margin: auto;
 	border: 3px solid green;
 	padding: 5px;

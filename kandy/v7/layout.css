@@ -37,6 +37,11 @@ img{
 	width: 200px;
 }
 
+.sectionLink{
+	font-style: italic;
+	font-size: 0.9em;
+}
+
 footer{
 	background-color: Skyblue;
 	padding: 10px 10px;
