@@ -1,0 +1,283 @@
+/* VEIWPORTS */
+/* --------------------------------------------------- For tablets: --------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+    /* ----------------------- Content sections ----------------------- */
+    section {
+        background-color: #6baaf77c;
+        width: 700px;
+        margin: auto;
+    }
+
+    .text_right p {
+        font-size: 19px;
+        color: #FFE81F;
+        font-weight: 600;
+    }
+
+    div.image_left {
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+
+    div.text_right {
+        margin-top: 50px;
+        width: 400px;
+        margin-right: 30px;
+    }
+   
+    img#ep2gif {
+        width: 380px;
+        height: 160px;
+    }
+
+    img#ep3gif {
+        width: 380px;
+        height: 160px;
+    }
+
+    img#ep2poster {
+        width: 240px;
+        height: fit-content;
+    }
+
+    img#ep3poster {
+        width: 240px;
+        height: 365px;
+    }
+
+    img#ep1_title {
+        width: 580px;
+        margin: 0 auto
+    }
+    
+    /* ----------------------- Planet Map ----------------------- */
+    .dropdown-content {
+        width: 110%;
+    }
+
+    /* Popups */
+    .planet-hotspot[data-tooltip]:after {
+        opacity: 1 !important;
+        pointer-events: none;
+        /* Making the popups always visable */
+        position: absolute;
+        visibility: visible !important;
+        display: block !important;
+    }
+
+    /* ----------------------- Popups ----------------------- */
+    /* Arrow for Episode I popup (points left) */
+    div#ep1[data-tooltip]:before {
+        content: "";
+        position: absolute;
+        left: 110px;  /* Adjust to match your popup position */
+        top: 20px;    /* Adjust as needed */
+        border-width: 6px 8px 6px 0;
+        border-style: solid;
+        border-color: transparent #FFE81F transparent transparent;
+        display: block;
+        z-index: 2;
+    }
+
+    /* Arrow for Episode II popup (points left) */
+    div#ep2[data-tooltip]:before {
+        content: "";
+        position: absolute;
+        left: 145px;
+        top: 106px;
+        border-width: 6px 8px 6px 0;
+        border-style: solid;
+        border-color: transparent #FFE81F transparent transparent;
+        display: block;
+        z-index: 2;
+    }
+
+    /* Arrow for Episode III popup (points right) */
+    div#ep3[data-tooltip]:before {
+        content: "";
+        position: absolute;
+        right: 128px;
+        top: 140px;
+        border-width: 6px 0 6px 8px;
+        border-style: solid;
+        border-color: transparent transparent transparent #FFE81F;
+        display: block;
+        z-index: 2;
+    }
+}
+
+/* ---------------------------- Show mobile nav and hamburger for all screens up to 1000px ---------------------------- */
+@media screen and (max-width: 1000px) {
+  .mobile-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        background-color: #101010;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 70px;
+  }
+
+  .mobile-nav a {
+        padding: 8px 8px 20px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #FFE81F;
+        display: block;
+        transition: 0.2s;
+        font-family: 'Gothic A1';
+    }
+
+  .mobile-nav-close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+  #mobile-nav-open {
+        display: inline-block;
+        margin: 10px 0 0 10px; 
+    }
+
+  #nav-container {
+      display: none !important;
+    }
+
+  .mobile-nav a.active {
+        background-color: #6baaf77c;
+        color: #FFE81F;
+        border-radius: 10px;
+    }
+}
+
+
+/* ----------------------------------------- Hide mobile nav and hamburger on desktop ----------------------------------------- */
+@media screen and (min-width: 1001px) {
+  .mobile-nav,
+  #mobile-nav-open {
+      display: none !important;
+  }
+  #nav-container {
+      display: block;
+  }
+}
+
+/* --------------------------------------------------- Hide mobile home content for desktop --------------------------------------------------- */
+@media screen and (min-width: 600px) {
+/* ----------------------- Hide Mobile index content ----------------------- */
+    #mobile-home {
+        display: none;
+    }
+}
+
+/* --------------------------------------------------- For mobile phones: --------------------------------------------------- */
+@media screen and (max-width: 600px) {
+    /* ----------------------- Planet Map ----------------------- */
+    #home_map {
+        display: none !important;
+    }
+
+    /* ----------------------- Content sections ----------------------- */
+    section {
+        width: 98vw;
+        min-width: 0;
+        max-width: 95vw;
+        margin: auto;
+        top: 0;
+        border-radius: 20px;
+        height: 1000px;
+    }
+    
+    img#ep1_title,
+    img#ep2_title,
+    img#ep3_title {
+        width: 98vw;         
+        max-width: 98vw;    
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+    
+    
+    img#ep1gif,
+    img#ep2gif,
+    img#ep3gif {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    .text_right p {
+        text-align: justify;
+        float: none;
+        margin: 0px 35px 0px 35px;
+    }
+
+    div.image_left {
+        float: none;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    div.text_right {
+        width: auto;
+        float: none;
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+
+    img#ep1poster,
+    img#ep2poster,
+    img#ep3poster {
+        width: 340px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    header {
+        display: block;
+        margin: auto;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+   
+    /* --------------------------------------------------- Home sections --------------------------------------------------- */
+    section#mobile-home {
+        height: auto;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    img#tatooine {
+        float: left;
+        padding: 10px;
+        z-index: 10;
+    }
+
+    p#ep1mobiletext {
+        font-size: 18px;
+        margin: 0px;
+        float: right;
+        text-align: center;
+        width: 60%;
+
+    }
+
+    section#mobile-home a {
+       width: 30%;
+       z-index: 1000;
+    }
+}   
+

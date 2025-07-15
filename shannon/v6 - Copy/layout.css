@@ -79,19 +79,24 @@ nav ul {
 nav ul li a,
 .dropbtn {
   text-decoration: none;
-  float: left;
+  /*float: left;*/
   margin-right: 5px;
   font-size: 1.0em;
   color: black;
   border: 2px solid #ffffff;
   border-bottom: none;
   border-right: none;
-  width: 190.51px;
+ /* width: 190.51px; */
   text-align: center;
   display: block;
   background: grey;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+nav ul li{
+	width: 190.51px;
+	float: left;
 }
 
 nav ul li a:hover,
@@ -105,7 +110,7 @@ li.dropdown {
   display: inline-block;
 }
 
-.dropdown-content {
+div.dropdown-content {
   display: none;
   position: absolute;
   background: #eeeeee;
@@ -113,7 +118,7 @@ li.dropdown {
   z-index: 1;
   border-radius: 5px;
   width: 169px;
-  margin-top: 25px;
+  /*margin-top: 25px;*/
 }
 
 .dropdown-content a {
@@ -137,7 +142,7 @@ li.dropdown {
 .pixelify-sans-<uniquifier> {
   font-family: "Pixelify Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: normal; /*???*/
   font-style: normal;
 }
 
@@ -241,19 +246,20 @@ html.design {
 
 /* Responsive ----------------------------------------- */
 @media screen and (max-width: 1024px) {
+
   body {
     width: 90%;
   }
   
-  nav ul li a,
-  .dropbtn {
+ /* nav ul li a,*/
+  nav ul li/*,.dropbtn*/ { 
     width: 30%;
   }
   
   .dropdown-content {
-    min-width: 26%;
+    /*min-width: 26%;*/
     margin-top: 1px;
-    width: 26.3%;
+    /*width: 26.3%;*/
   }
   
   .dropdown-content a {
@@ -276,4 +282,28 @@ html.design {
     border-radius: 20px;
     align: center;
   }
+}
+
+@media screen and (max-width: 640px) {
+  
+ /* nav ul li a,*/
+  nav ul li/*,.dropbtn*/ { 
+    width: auto;
+  }
+  
+  nav ul li a,.dropbtn {
+	font-size: 0.8em;
+		padding: 5px;
+  }
+  
+  .dropdown-content {
+    /*min-width: 26%;*/
+    /*width: 26.3%;*/
+  }
+  
+  .dropdown-content a {
+    width: auto;
+  }
+  
+
 }
