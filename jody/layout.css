@@ -1,0 +1,134 @@
+/* ==== Import Google Font Roboto Slab ==== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/* ==== General Page Styles ==== */
+
+html {
+	background: #a9cce3; /* Light blue background for full page */
+}
+
+/* Main body container styling */
+body {
+	border: 1px solid black;
+	width: 800px;               /* Fixed width for centered layout */
+	margin: 0 auto;             /* Centers the body on screen */
+	padding: 0.5em;
+	font-family: "Roboto Slab", serif;  /* Custom font */
+	background: #d4e6f1;        /* Slightly lighter blue background inside the page */
+	font-size: 1em;
+}
+
+/* ==== Header Styling ==== */
+
+header {
+	/* 'sky light blue' is not a valid color. You can use 'skyblue' instead */
+	background: skyblue;
+	background-image: url("banner.png"); /* Background banner image */
+	background-repeat: no-repeat;        /* Prevents tiling */
+}
+
+/* Ensures the banner image fills the full width of the content */
+header img {
+	width: 800px;
+}
+
+/* ==== Navigation Bar Styling ==== */
+
+nav {
+	background: skyblue; /* Replaced 'sky light blue' with valid 'skyblue' */
+	padding-left: 0em;
+	padding-bottom: 10px;
+}
+
+/* Styling for navigation links */
+nav a {
+	font-size: 0.8em;
+	padding-right: 0.8em;
+	/* 'sage green' is not a valid color; use a hex or named value like #9DC183 or 'seagreen' */
+	color: seagreen;
+}
+
+/* ==== Section Styling (Main content area) ==== */
+
+section {
+	margin: 10px 0; /* Adds vertical spacing around section */
+}
+
+/* Style for images inside the section */
+section img {
+	width: 386px;
+	height: 200px;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+/* ==== Footer Styling ==== */
+
+footer {
+	height: 30px;
+	background: skyblue;
+}
+
+/* Footer text styles */
+footer p {
+	font-family: "Roboto Slab", serif;
+	font-size: 0.8em;
+	padding-top: 10px;
+	margin: 10px 0 0 10px;
+	/* 'sage green' replaced with valid color */
+	color: seagreen;
+}
+
+/* ==== Navigation Menu Layout and Styling ==== */
+
+nav ul {
+	list-style-type: none;      /* Removes bullets from list */
+	margin: 0;
+	padding: 0;
+	overflow: hidden;           /* Ensures floats inside behave properly */
+	background-color: #7fb3d5;  /* Blue background for nav bar */
+}
+
+/* Each nav item is floated left for horizontal layout */
+nav ul li {
+	float: left;
+	border: 1px solid white;
+	width: 131px;
+}
+
+/* Special width for the last menu item to align evenly */
+nav ul li:last-child {
+	width: 135px;
+}
+
+/* Styling for nav links inside list items */
+nav ul li a {
+	display: block;
+	color: white;
+	text-shadow: 1px 1px black;  /* Gives a soft outline for readability */
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* Hover effect for navigation links */
+ul li a:hover {
+	background-color: #111;  /* Dark background on hover */
+}
+
+/* Highlight current page link */
+.current {
+	background-color: #a3e4d7; /* Teal-like background for current page */
+}
+
+/* Style for current link text */
+nav ul li.current a {
+	color: black;
+	text-shadow: 1px 1px white;
+}
+
+/* ==== Section List Items (if used in content) ==== */
+
+section ul li {
+	margin-bottom: 15px;
+}
