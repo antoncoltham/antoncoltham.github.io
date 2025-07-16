@@ -1,0 +1,79 @@
+/* ---- Style for entire screen ---- */
+
+html {
+	background: rgb(77, 115, 78);
+}
+
+/* ---- Style for entire body ---- */
+
+body {
+	border:1px solid rgb(185, 255, 199); 
+	width:800px;
+	margin:0 auto; 
+	padding:0.5em;    
+	font-family: Arial, Helvetica, sans-serif;
+	background:rgb(232, 255, 239);
+	font-size: 1em;
+}
+
+/* ---- Style for page header ---- */
+
+header {
+	background: rgb(77, 115, 78);
+	/*background-image: url("images/banner.png");
+	background-repeat: no-repeat;
+	background-size: contain; /* Resize the banner to cover the header area */
+    width: 100%; /* Ensure the header spans the full width */
+    height: 200px; /* Adjust the height of the header */
+}
+
+header h1{
+	margin: 0px
+}
+
+header img {
+	width: 100%; /* Make the image cover the header */
+	height: auto; /* Maintain aspect ratio */	
+	display: block; /* Remove any inline spacing */
+
+}
+
+/* ---- Style for page navigation ---- */
+
+nav {
+	background: rgb(147, 202, 149);
+	padding-left: 0.5em;
+	padding-bottom: 10px;
+	margin-top: 50px;
+	padding-top: 10px;
+}
+
+nav a{
+ 	font-size: 0.8em;
+	padding-right:0.8em;
+}
+
+/* ---- Style for main section of body ---- */
+
+section{
+	margin:10px 0 10px 0px; 
+}
+
+section img{
+    width: 350px;
+}
+
+/* ---- Style for page footer ---- */
+
+footer {
+	height:30px;
+	background: rgb(77, 115, 78);
+}
+
+footer p{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 0.8em;
+	padding-top:10px;
+	margin:10px 0 0 10px;
+}
+
