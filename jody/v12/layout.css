@@ -42,7 +42,6 @@ nav {
 
 /* Styling for navigation links */
 
-
 nav ul {
 	list-style-type: none;      /* Removes bullets from list */
 	margin: 0;
@@ -72,9 +71,6 @@ nav ul li a {
 	padding: 14px 16px;
 	text-decoration: none;
 	font-size: 0.8em;
-	padding-right: 0.8em;
-	/* 'sage green' is not a valid color; use a hex or named value like #9DC183 or 'seagreen' */
-	color: seagreen;
 }
 
 /* Hover effect for navigation links */
@@ -121,8 +117,8 @@ footer p {
 	font-size: 0.8em;
 	padding-top: 10px;
 	margin: 10px 0 0 10px;
-	/* 'sage green' replaced with valid color */
-	color: seagreen;
+	color: white;
+	text-shadow: 1px 1px black;
 }
 
 
