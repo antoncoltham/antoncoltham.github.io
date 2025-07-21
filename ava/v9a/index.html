@@ -98,7 +98,11 @@
     <header>
         <!-- Star Wars logo and page title -->
         <h1>
-            <img width="400" src="images/star_wars_logo.png" alt="Menu Icon">
+			<!--<picture>
+				<source srcset="images/star_wars_logo.webp" type="image/webp">
+				<img width="400" src="images/star_wars_logo.png" alt="Menu Icon" fetchpriority="high">
+			</picture>-->
+			<img width="400" src="images/star_wars_logo.webp" alt="Menu Icon" fetchpriority="high">
         </h1>
         <h2>Episode I, II and III</h2>
     </header>
@@ -106,7 +110,7 @@
     <!-- Interactive planet map with hotspots -->
     <div id="home_map">
         <!-- Main map image -->
-        <img src="images/planets.jpg" width="800" height="500" alt="Star Wars Planets">
+        <img src="images/planets.webp" width="800" height="500" alt="Star Wars Planets">
 
         <!-- Clickable hotspots for each episode -->
         <div id="ep1" class="planet-hotspot" style="left:6.1%; top:47.4%; width:28%; height:39.6%;" data-tooltip
@@ -126,7 +130,7 @@
     <section id="mobile-home1">
         <!-- Clickable image for Episode I -->
         <a href="episode1.html">
-            <img id="home-image" src="images/tatooine.png" alt="Tatooine">
+            <img id="home-image" src="images/tatooine.webp" alt="Tatooine">
         </a>
         <!-- Caption for Episode I -->
         <p id="mobiletext">Episode I - The Phantom Menace</p>
@@ -136,7 +140,7 @@
     <section id="mobile-home2">
         <!-- Clickable image for Episode II -->
         <a href="episode2.html">
-            <img id="home-image" src="images/geonosis.png" alt="geonosis">
+            <img id="home-image" src="images/geonosis.webp" alt="geonosis">
         </a>
         <!-- Caption for Episode II -->
         <p id="mobiletext">Episode II - Attack of the Clones</p>
@@ -146,7 +150,7 @@
     <section id="mobile-home3">
         <!-- Clickable image for Episode III -->
         <a href="episode3.html">
-            <img id="home-image" src="images/courasant.png" alt="courasant">
+            <img id="home-image" src="images/courasant.webp" alt="courasant">
         </a>
         <!-- Caption for Episode III -->
         <p id="mobiletext">Episode III - Revenge of the Sith</p>
