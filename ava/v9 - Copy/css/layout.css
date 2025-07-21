@@ -1,12 +1,10 @@
-/*---------------------Google Fonts-----------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /*------------------------Headers--------------------------*/
 /* Center all h1 and h2 */
-h1,
+/*h1,
 h2 {
   text-align: center;
-}
+}*/
 
 /* Remove bottom margin from h1 */
 h1 {
@@ -19,20 +17,20 @@ header h2 {
 }
 
 /* Style for all h2 */
-h2 {
+/*h2 {
   font-family: 'Gothic A1';
   font-size: 30px;
   color: #FFE81F;
   font-weight: 500;
-}
+}*/
 
 /* Center all images and add top padding */
-img {
+/*img {
   padding-top: 20px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+}*/
 
 /*------------------------Content Pages Titles------------------------*/
 /* Title images for each episode */
@@ -54,7 +52,7 @@ html {
 }
 
 /* Set specific background for each page */
-html#index,
+/*html#index,*/
 html#episode1,
 html#episode2,
 html#episode3 {

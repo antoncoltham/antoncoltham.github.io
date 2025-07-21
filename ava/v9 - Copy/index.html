@@ -12,15 +12,57 @@
     <title>Star Wars: Episode I, II and III</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/popups.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/viewport.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
+ 	<link rel="preload" as="image" href="images/spacebackground5.jpg">
+	<link rel="preload" as="image" href="images/star_wars_logo.png" fetchpriority="high">
+	<link rel="preload" as="image" href="images/planets.jpg" fetchpriority="high">
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" media="all">
 
-<!-- Lightsaber nav JavaScript -->
-<script src="lightsaber.js"></script>
+
+	<link rel="preload" href="css/layout.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/layout.css"></noscript>
+
+	<link rel="preload" href="css/nav.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/nav.css"></noscript>
+
+	<link rel="preload" href="css/popups.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/popups.css"></noscript>
+
+	<link rel="preload" href="css/viewport.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/viewport.css"></noscript>
+
+	<script src="lightsaber.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+	
+	<style>
+  h1, h2 {
+    text-align: center;
+  }
+
+  h2 {
+    font-family: 'Gothic A1';
+    font-size: 30px;
+    color: #FFE81F;
+    font-weight: 500;
+  }
+
+  img {
+    padding-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  html#index {
+    background-image: url("images/spacebackground5.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+</style>
+
+</head>
 
 <!-- Desktop Dropdown Menu (lightsaber navigation) -->
 <div id="nav-container">
