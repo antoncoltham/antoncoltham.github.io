@@ -1,0 +1,163 @@
+<!doctype html>
+
+<html id="index" lang="en"> <!-- the id has been used for styling purposes -->
+
+<head>
+    <meta charset="utf-8"> <!-- character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive design -->
+    <meta name="author" content="Ava">
+    <meta name="description" content="Website to showcase the prequel trilogy of Star Wars">
+    <meta name="robots" content="nofollow">
+
+    <title>Star Wars: Episode I, II and III</title>
+
+    <!-- Stylesheets -->
+ 	<link rel="preload" as="image" href="images/spacebackground5.jpg">
+	<link rel="preload" as="image" href="images/star_wars_logo.png" fetchpriority="high">
+	<link rel="preload" as="image" href="images/planets.jpg" fetchpriority="high">
+
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" media="all">
+
+
+	<link rel="preload" href="css/layout.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/layout.css"></noscript>
+
+	<link rel="preload" href="css/nav.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/nav.css"></noscript>
+
+	<link rel="preload" href="css/popups.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/popups.css"></noscript>
+
+	<link rel="preload" href="css/viewport.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/viewport.css"></noscript>
+
+	
+	<style>
+  h1, h2 {
+    text-align: center;
+  }
+
+  h2 {
+    font-family: 'Gothic A1';
+    font-size: 30px;
+    color: #FFE81F;
+    font-weight: 500;
+  }
+
+  img {
+    padding-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  html#index {
+    background-image: url("images/spacebackground5.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+</style>
+
+</head>
+
+<!-- Desktop Dropdown Menu (lightsaber navigation) -->
+<div id="nav-container">
+    <div class="toggle-icon">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <div class="dropdown-content">
+        <a id="1" href="index.html" class="active">Home Page</a>
+        <a id="2" href="episode1.html">Episode 1</a>
+        <a id="3" href="episode2.html">Episode 2</a>
+        <a id="4" href="episode3.html">Episode 3</a>
+    </div>
+</div>
+
+<!-- Mobile/Tablet Sidebar Navigation -->
+<div id="mobile-nav" class="mobile-nav">
+  <a href="javascript:void(0)" class="mobile-nav-close" onclick="closeMobileNav()">&times;</a>
+  <a href="index.html" class="active">Home</a>
+  <a href="episode1.html">Episode 1</a>
+  <a href="episode2.html">Episode 2</a>
+  <a href="episode3.html">Episode 3</a>
+</div>
+
+<!-- Hamburger icon for mobile/tablet nav -->
+<div id="mobile-nav-open" class="toggle-icon" onclick="openMobileNav()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div>
+
+<body>
+    <header>
+        <!-- Star Wars logo and page title -->
+        <h1>
+			<!--<picture>
+				<source srcset="images/star_wars_logo.webp" type="image/webp">
+				<img width="400" src="images/star_wars_logo.png" alt="Menu Icon" fetchpriority="high">
+			</picture>-->
+			<img width="400" src="images/star_wars_logo.webp" alt="Menu Icon" fetchpriority="high">
+        </h1>
+        <h2>Episode I, II and III</h2>
+    </header>
+
+    <!-- Interactive planet map with hotspots -->
+    <div id="home_map">
+        <!-- Main map image -->
+        <img src="images/planets.webp" width="800" height="500" alt="Star Wars Planets">
+
+        <!-- Clickable hotspots for each episode -->
+        <div id="ep1" class="planet-hotspot" style="left:6.1%; top:47.4%; width:28%; height:39.6%;" data-tooltip
+            data-tooltip-label="Episode I" data-tooltip-message="The Phantom Menace"
+            onclick="window.location='episode1.html'"></div>
+
+        <div id="ep2" class="planet-hotspot" style="left:38%; top:5%; width:26.25%; height:28%;" data-tooltip
+            data-tooltip-label="Episode II" data-tooltip-message="Attack of The Clones"
+            onclick="window.location='episode2.html'"></div>
+
+        <div id="ep3" class="planet-hotspot" style="left:62.5%; top:50.8%; width:28.25%; height:34.2%;" data-tooltip
+            data-tooltip-label="Episode III" data-tooltip-message="Revenge of the Sith"
+            onclick="window.location='episode3.html'"></div>
+    </div>
+
+    <!-- Mobile home section for Episode I -->
+    <section id="mobile-home1">
+        <!-- Clickable image for Episode I -->
+        <a href="episode1.html">
+            <img id="home-image" src="images/tatooine.webp" alt="Tatooine">
+        </a>
+        <!-- Caption for Episode I -->
+        <p id="mobiletext">Episode I - The Phantom Menace</p>
+    </section>
+
+    <!-- Mobile home section for Episode II -->
+    <section id="mobile-home2">
+        <!-- Clickable image for Episode II -->
+        <a href="episode2.html">
+            <img id="home-image" src="images/geonosis.webp" alt="geonosis">
+        </a>
+        <!-- Caption for Episode II -->
+        <p id="mobiletext">Episode II - Attack of the Clones</p>
+    </section>
+
+    <!-- Mobile home section for Episode III -->
+    <section id="mobile-home3">
+        <!-- Clickable image for Episode III -->
+        <a href="episode3.html">
+            <img id="home-image" src="images/courasant.webp" alt="courasant">
+        </a>
+        <!-- Caption for Episode III -->
+        <p id="mobiletext">Episode III - Revenge of the Sith</p>
+    </section>
+	
+	<script src="lightsaber.js" defer></script> 
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+</body>
+
+</html>
