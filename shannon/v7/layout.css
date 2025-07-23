@@ -47,7 +47,10 @@ header h1 {
   padding-bottom: 5px;
 }
 
-
+header img {
+  width: 100%;
+  padding: 0;
+}
 
 footer {
   background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
@@ -118,13 +121,13 @@ div.dropdown-content {
   /*margin-top: 25px;*/
 }
 
-.dropdown-content a {
+div.dropdown-content a {
   color: black;
   padding: 9px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
-  /*width: 158px;**********************/
+  /*width: 158px;*/
 }
 
 .dropdown-content a:hover {
@@ -260,7 +263,7 @@ html.design {
   }
   
   div.dropdown-content a {
-    /*width: 88%;*********************************/
+    width: 88%;
   }
   
   .pix body {
@@ -302,5 +305,8 @@ html.design {
     width: auto;
   }
   
+  header h1 {
+	font-size: 8vw;
+  }
 
 }
