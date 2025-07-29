@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/press-start-2p');
+@import url('https://fonts.cdnfonts.com/css/standard-galactic-alphabet-hand');
+
+/* Global Styles ----------------------------------------- */
+html {
+  background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+}
+
+body {
+  width: 800px;
+  margin: auto;
+  color: #000;
+  padding: 20px;
+  font-size: 20px;
+  font-family: 'Pixelify Sans', sans-serif;
+  background-image: linear-gradient(1800deg, #9a90a3, #d3d3d3);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 400px;
+  border: 1px Plum;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+header {
+  background: White url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif") repeat;
+  padding: 6px;
+}
+
+header h1 {
+  margin: 10px 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 55px;
+  font-family: 'Press Start 2P', sans-serif;
+  padding-bottom: 5px;
+}
+
+header img {
+  width: 100%;
+  padding: 0;
+}
+
+footer {
+  background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+  padding: 10px 5px;
+}
+
+footer p {
+  margin: 0;
+  color: #ffffff;
+  padding: 1px 20px;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+.sectionLink {
+  font-size: 0.9em;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+/* Navigation ----------------------------------------- */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a,
+.dropbtn {
+  text-decoration: none;
+  /*float: left;*/
+  margin-right: 5px;
+  font-size: 1.0em;
+  color: black;
+  border: 2px solid #ffffff;
+  border-bottom: none;
+  border-right: none;
+ /* width: 190.51px; */
+  text-align: center;
+  display: block;
+  background: grey;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+nav ul li{
+	width: 190.51px;
+	float: left;
+}
+
+nav ul li a:hover,
+.dropdown:hover .dropbtn {
+  background: lightgrey;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+div.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #eeeeee;
+  box-shadow: 0px 8px 16px 0px #0003;
+  z-index: 1;
+  border-radius: 5px;
+  width: 185.51px;
+  /*margin-top: 25px;*/
+}
+
+div.dropdown-content a {
+  color: black;
+  padding: 9px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  /*width: 158px;*/
+}
+
+.dropdown-content a:hover {
+  background: lightgrey;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Fonts ----------------------------------------- */
+.pixelify-sans-<uniquifier> {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal; /*???*/
+  font-style: normal;
+}
+
+/* Other page-specific styles ----------------------------------------- */
+html.design {
+  background-image: url("https://th.bing.com/th/id/R.9e2fa2a320bf2a36df6c77d87df19856?rik=skAGBPPo7r0Rkw&riu=http%3a%2f%2fimg2.wikia.nocookie.net%2f__cb20130725195235%2fnikita2010%2fimages%2fd%2fd2%2fBlank.png&ehk=NdC928b2USfozoi2J5l5z3lB2PMYSpmfPIqPfeXsq%2bw%3d&risl=&pid=ImgRaw&r=0");
+}
+
+.design body {
+  width: 0;
+  height: fit-content;
+  background: LightGrey;
+  margin-left: 100px;
+  color: #000;
+  padding: 0;
+  font-size: 0;
+}
+
+.design img {
+  width: fit-content;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.pix body {
+  width: 800px;
+  margin: auto;
+  color: #000;
+  padding: 20px;
+  font-size: 20px;
+  background-image: linear-gradient(1800deg, #9a90a3, #d3d3d3);
+}
+
+.pix img {
+  width: 300px;
+  border: 1px Plum;
+  padding: 15px;
+  border-radius: 20px;
+  align: center;
+}
+
+.pix imghelp {
+  float: right;
+  padding-right: 100px;
+  background: red;
+}
+
+.end body {
+  width: 800px;
+  margin: auto;
+  color: #000;
+  padding: 20px;
+  font-size: 20px;
+  background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+}
+
+.end img {
+  width: 500px;
+  border: 1px Plum;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.light body {
+  width: 100%;
+  color: #000;
+  padding: 0;
+  font-size: 20px;
+  background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+}
+
+.light img {
+  width: 100%;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.bird body {
+  width: 800px;
+  margin: auto;
+  color: #000;
+  padding: 20px;
+  font-size: 20px;
+  background-image: linear-gradient(1800deg, #9a90a3, #d3d3d3);
+}
+
+.bird img {
+  width: 100%;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.centerbird {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* Responsive ----------------------------------------- */
+@media screen and (max-width: 1024px) {
+
+  body {
+    width: 90%;
+  }
+  
+ /* nav ul li a,*/
+  nav ul li/*,.dropbtn*/ { 
+    width: 30%;
+  }
+  
+  div.dropdown-content {
+    /*min-width: 26%;*/
+    margin-top: 1px;
+    width: 26.3%;
+  }
+  
+  div.dropdown-content a {
+    width: 88%;
+  }
+  
+  .pix body {
+    width: 90%;
+    margin: auto;
+    color: #000;
+    padding: 20px;
+    font-size: 20px;
+    background-image: linear-gradient(1800deg, #9a90a3, #d3d3d3);
+  }
+  
+  .pix img {
+    width: 90%;
+    border: 1px Plum;
+    padding: 15px;
+    border-radius: 20px;
+    align: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  
+ /* nav ul li a,*/
+  nav ul li/*,.dropbtn*/ { 
+    width: auto;
+  }
+  
+  nav ul li a,.dropbtn {
+	font-size: 0.8em;
+		padding: 5px;
+  }
+  
+  .dropdown-content {
+    /*min-width: 26%;*/
+    /*width: 26.3%;*/
+  }
+  
+  .dropdown-content a {
+    width: auto;
+  }
+  
+  header h1 {
+	font-size: 8vw;
+  }
+
+}
+
+ /* contact stuff hopefully */
+ 
+ * {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

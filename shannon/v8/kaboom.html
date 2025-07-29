@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Loveshare End Event</title>
+		<link rel="stylesheet" href="layout.css">
+		<link rel="stylesheet" href="fontcss.css">
+		</head>
+	<body>
+		<header>
+			<h1> LoveShare</h1>
+			
+			<nav class="minecraft black">
+				<ul class="minecraft">
+					<li><a href="lIlIllIllIlIlIIlIIlllIl.html">Home</a>	</li>
+					<li><a href="lIlIlIlIllIlIllIllllIII.html">Images</a>	</li>
+					<li class="dropdown">
+						<a href="javascript:void(0)" class="dropbtn">More options</a>
+						<div class="dropdown-content">
+							<a href="llIlllIIllllIllIlIIIIIl.html">Do not click</a>
+							<a href="IIIlIlIllIllllIllIlIlIl.html">The alphabet</a>
+							<a href="lIllIIllllllIIIlIlIlIlI.html">Definitely not a jumpscare</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section id="mainContent">
+			
+			<title>FeedBack Form With Email Functionality</title>
+			<link href="elements.css" rel="stylesheet">
+			</head>
+			<!-- Body Starts Here -->
+			<body>
+			<div class="container">
+			<!-- Feedback Form Starts Here -->
+			<div id="feedback">
+			<!-- Heading Of The Form -->
+			<div class="head">
+			<h3>FeedBack Form</h3>
+			<p>This is feedback form. Send us your feedback !</p>
+			</div>
+			<!-- Feedback Form -->
+			<form action="secure_email_code.php" id="form" method="post" name="form">
+			<input name="vname" placeholder="Your Name" type="text" value="">
+			<input name="vemail" placeholder="Your Email" type="text" value="">
+			<input name="sub" placeholder="Subject" type="text" value="">
+			<label>Your Suggestion/Feedback</label>
+			<textarea name="msg" placeholder="Type your text here..."></textarea>
+			<input id="send" name="submit" type="submit" value="Send Feedback">
+			</form>
+			<h3><?php include "secure_email_code.php"?></h3>
+			</div>
+			<!-- Feedback Form Ends Here -->
+			</div>
+			</body>
+			<!-- Body Ends Here -->
+			</html>
+			
+		</section>
+		<footer>
+			<p>Created by LD, at some time </p>
+		</footer>
+	</body>
+</html>

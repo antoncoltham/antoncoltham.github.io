@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/press-start-2p');
+ @import url('https://fonts.cdnfonts.com/css/standard-galactic-alphabet-hand');
+
+                
+
+html{
+	background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+.grid-container {
+  display: grid;
+  display:-ms-grid;
+  grid-gap: 35px;
+  padding: 10px;
+  justify-items: start;
+  justify-content: center;
+}
+
+
+.skin1-1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.skin1-2 {
+  grid-row: 1;
+  grid-column: 2;
+  padding-top: 28px;
+}
+
+.skin2-1 {
+  grid-row: 2;
+  grid-column: 1;
+  padding-top: 12px;
+}
+
+.skin2-2 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.skin3-1 {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.skin3-2 {
+  grid-row: 3;
+  grid-column: 2;
+  padding-top: 52px;
+}
+
+
+
+
+body{
+	width: 800px;
+	background-image: linear-gradient(1800deg, #9a90a3, #d3d3d3);
+	margin: auto;
+	color: #000000;
+	padding: 20px;
+	font-family: 'Pixelify Sans', sans-serif;                            
+	font-size: 20px;
+}
+
+header{
+	background-color: White;
+	padding: 6px;
+	background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+    background-repeat: repeat;
+}
+
+header h1{
+	margin: 10px 0px;
+    font-family: 'Press Start 2P', sans-serif;
+	font-size: 55px;
+	text-align: center;
+	color: white;
+	padding-bottom: 5px
+}
+
+header img{
+	width: 100%;
+	padding: 0;
+}
+
+
+	
+section{
+	margin-bottom: 40px;
+}
+
+img{
+	width: 400px;
+	border: 1px Plum;
+	padding: 5px;
+	border-radius: 20px;
+}
+
+.sectionLink{
+	font-family: 'Pixelify Sans', sans-serif;
+	font-size: 0.9em;
+}
+
+footer{
+	background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+	padding: 10px 5px;
+}
+
+footer p{
+	margin: 0px;
+	font-family: 'Pixelify Sans', sans-serif;
+	color: white;
+	padding: 1px 20px;
+}
+
+/* Navigations ===========================================================*/
+
+
+ nav  {
+  height:20px;
+ 
+ } 
+
+ nav  ul {
+  list-style:none;
+  margin:0;
+  padding: 0; 
+ } 
+
+ nav  ul li a { 
+  text-decoration:none;
+  float:left;
+  margin-right:5px;
+  font-size: 1.0em;
+  color: black;
+
+  border:2px solid white;
+  border-bottom:none;
+  border-right: none;
+
+  width:190.51px;
+  text-align:center;
+  display:block;
+  background:grey;
+
+  -moz-border-radius-topleft:15px;
+  -moz-border-radius-topright:15px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px; 
+ } 
+
+ nav  ul li a:hover {
+  background:lightgrey;
+  color:#FFF;
+  text-shadow:1px 1px 1px #000;
+ } 
+ 
+ 
+ 
+ /* Dropdown ===========================================================*/
+ 
+li a, .dropbtn {
+  text-decoration:none;
+  float:left;
+  margin-right:5px;
+  font-size: 1.0em;
+  color: black;
+
+  border:2px solid white;
+  border-bottom:none;
+  border-right: none;
+
+  width:190.51px;
+  text-align:center;
+  display:block;
+  background:grey;
+
+  -moz-border-radius-topleft:15px;
+  -moz-border-radius-topright:15px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px; 
+ } 
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background: lightgrey;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #000;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #eeeeee;
+  min-width: 192px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+  width: 169px;
+  margin-top: 1px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 9px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: 158px;
+}
+
+.dropdown-content a:hover {background-color: lightgrey;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.area__element:hover .area__title{
+  visibility: initial;
+}
+
+.area__title--right{
+  top: .5em;
+  right: .5em;
+}
+
+.area__title--left{
+  bottom: .5em;
+  left: .5em;  
+}
+
+
+ /* Dropdown ===========================================================*/
+
+.pixelify-sans-<uniquifier> {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* 
+font-family: 'Standard Galactic Alphabet Hand', sans-serif;  
+font-family: "Pixelify Sans", sans-serif;
+font-family: 'Press Start 2P', sans-serif;
+*/
+
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*=========design page========*/
+
+html.design{
+	background-image: url("https://th.bing.com/th/id/R.9e2fa2a320bf2a36df6c77d87df19856?rik=skAGBPPo7r0Rkw&riu=http%3a%2f%2fimg2.wikia.nocookie.net%2f__cb20130725195235%2fnikita2010%2fimages%2fd%2fd2%2fBlank.png&ehk=NdC928b2USfozoi2J5l5z3lB2PMYSpmfPIqPfeXsq%2bw%3d&risl=&pid=ImgRaw&r=0");
+}
+
+.design body{
+	width: 0px;
+	height: fit;
+	background-color: LightGrey;
+	margin-left: 100px;
+	color: #000000;
+	padding: 0px;
+	font-family: 'Pixelify Sans', sans-serif;                            
+	font-size: 0px;
+}
+
+.design img{
+	width: fit-content;
+	border: 0px Plum;
+	padding: 0px;
+	border-radius: 0px;
+}
+
+
+/*=========pix page========*/
+
+
+.pix body{
+	width: 800px;
+	background-image: linear-gradient(1800deg, #9a90a3, #d3d3d3);
+	margin: auto;
+	color: #000000;
+	padding: 20px;
+	font-family: 'Pixelify Sans', sans-serif;                            
+	font-size: 20px;
+}
+
+.pix img {
+    width: 300px;
+	border: 1px Plum;
+	padding: 15px;
+	border-radius: 20px;
+	align: center;
+}
+
+.pix imghelp{
+	float: right;
+	padding-right: 100px;
+	background-color: red;
+}
+
+
+
+
+
+
+/*=========frame page========*/
+
+.end body{
+	width: 800px;
+	background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+	margin: auto;
+	color: #000000;
+	padding: 20px;
+	font-family: 'Pixelify Sans', sans-serif;                            
+	font-size: 20px;
+}
+
+.end img {
+    width: 500px;
+	border: 1px Plum;
+	padding: 15px;
+	border-radius: 20px;
+}
+
+/*=========light page========*/
+
+.light body{
+	width: 100%;
+	background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
+	color: #000000;
+	padding: 0px;
+	font-family: 'Pixelify Sans', sans-serif;                            
+	font-size: 20px;
+}
+
+.light img {
+    width: 100%;
+	border: 0px Plum;
+	padding: 0px;
+	border-radius: 0px;
+}
+
+
+/*=========bird page========*/
+
+.bird body{
+	width: 800px;
+	background-image: linear-gradient(1800deg, #9a90a3, #d3d3d3);
+	margin: auto;
+	color: #000000;
+	padding: 20px;
+	font-family: 'Pixelify Sans', sans-serif;                            
+	font-size: 20px;
+}
+
+.bird img {
+    width: 100%;
+	border: 0px Plum;
+	padding: 0px;
+	border-radius: 0px;
+}
+
+.centerbird {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+/* tablet view and stuff!! */
+@media screen and (max-width:1024px) {
+	body{
+		width: 90%;
+	}
+	
+	nav  ul li a { 
+		text-decoration:none;
+		float:left;
+		margin-right:5px;
+		font-size: 1.0em;
+		color: black;
+
+		border:2px solid white;
+		border-bottom:none;
+		border-right: none;
+
+		width:34%;
+		text-align:center;
+		display:block;
+		background:grey;
+
+		-moz-border-radius-topleft:15px;
+		-moz-border-radius-topright:15px;
+		-webkit-border-top-left-radius:5px;
+		-webkit-border-top-right-radius:5px; 
+	} 
+
+	li a, .dropbtn {
+		width:160%;
+		
+		-moz-border-radius-topleft:15px;
+		-moz-border-radius-topright:15px;
+		-webkit-border-top-left-radius:5px;
+		-webkit-border-top-right-radius:5px; 
+	} 
+	
+	.dropdown-content {
+		min-width: 21.3%;
+		width: 21.6%;
+	}
+
+	.dropdown-content a {
+		width: 88%;
+	}
+
+	.pix body{
+		width: 90%;
+		background-image: linear-gradient(1800deg, #9a90a3, #d3d3d3);
+		margin: auto;
+		color: #000000;
+		padding: 20px;
+		font-family: 'Pixelify Sans', sans-serif;                            
+		font-size: 20px;
+	}
+	
+	.pix img {
+		width: 90%;
+		border: 1px Plum;
+		padding: 15px;
+		border-radius: 20px;
+		align: center;
+	}
+	
+}
+
+
+
