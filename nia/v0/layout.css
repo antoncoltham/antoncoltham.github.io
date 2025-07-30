@@ -11,12 +11,15 @@ body {
   padding: 0;
   /*height: 100vh;*/
   width: 800px;
-  background-color: White;
+  /*background-color: White; move white backroung to section /*/
   margin: auto;
   /*position: relative;
   overflow: hidden;*/
 }
 
+section{
+   background-color: White;
+}
 /* Hamburger Menu */
 .hamburger {
   font-size: 26px;
@@ -38,10 +41,12 @@ body {
   border-radius: 5px;
 }
 
-.title-box h1 {
-  font-size: 20px;
+/*.title-box*/ /*title-box doesn't exist*/h1 {
+  font-size: 40px;
   color: darkorange;
   margin: 0;
+  text-shadow: 1.5px 1.5px white;
+  text-align: center;
 }
 
 /* Capybara Characters */
@@ -75,7 +80,9 @@ body {
   width: 200px;
   font-size: 14px;
   position: relative;
-  margin-top: 8px;
+  /*margin-top: 8px;*/
+  left: 150px;
+  top: 100px;
 }
 
 .speech.left::before {
