@@ -7,6 +7,51 @@ html {
   background-image: url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif");
 }
 
+.grid-container {
+    display: grid
+;
+    display: -ms-grid;
+    grid-gap: 35px;
+    padding: 10px;
+    justify-items: start;
+    justify-content: center;
+}
+
+.skin1-1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.skin1-2 {
+  grid-row: 1;
+  grid-column: 2;
+  padding-top: 28px;
+}
+
+.skin2-1 {
+  grid-row: 2;
+  grid-column: 1;
+  padding-top: 12px;
+}
+
+.skin2-2 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.skin3-1 {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.skin3-2 {
+  grid-row: 3;
+  grid-column: 2;
+  padding-top: 52px;
+}
+
+
+
 body {
   width: 800px;
   margin: auto;
@@ -36,6 +81,7 @@ section {
 header {
   background: White url("https://media.tenor.com/0XrlrG9HcEMAAAAd/end-minecraft.gif") repeat;
   padding: 6px;
+  padding-bottom: 26px;
 }
 
 header h1 {
@@ -366,8 +412,5 @@ input[type=submit]:hover {
   .column, input[type=submit] {
     width: 100%;
     margin-top: 0;
-  }
-  section img{
-	  width: 100%
   }
 }
