@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page 5 - Severance Comic</title>
+  <style>
+    body {
+      background-color: #007491;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: white;
+    }
+
+    .arrow-btn {
+      position: fixed;
+      bottom: 40px;
+      font-size: 1.5rem;
+      border-radius: 50px;
+      background-color: white;
+      color: #007491;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      z-index: 1000;
+      user-select: none;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    #leftButton { left: 40px; }
+    #rightButton { right: 40px; }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .speech-bubble {
+      position: relative;
+      background: white;
+      color: #007491;
+      border-radius: 20px;
+      padding: 20px 30px;
+      max-width: 500px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      box-shadow: 4px 4px 0px #004c5c;
+    }
+
+    .speech-bubble::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border: 12px solid transparent;
+      border-top-color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <div class="speech-bubble">
+      “These are the innies, they exist only to work, forever trapped in an office nightmare. They never leave”
+    </div>
+  </div>
+
+  <button id="leftButton" class="arrow-btn">←</button>
+  <button id="rightButton" class="arrow-btn">→</button>
+
+  <script>
+    const pages = ['index.html', 'page2.html', 'page3.html', 'page4.html', 'page5.html'];
+    const currentPage = window.location.pathname.split("/").pop();
+    function navigate(offset) {
+      const currentIndex = pages.indexOf(currentPage);
+      if (currentIndex === -1) return;
+      let newIndex = (currentIndex + offset) % pages.length;
+      if (newIndex < 0) newIndex += pages.length;
+      window.location.href = pages[newIndex];
+    }
+    document.getElementById('leftButton').addEventListener('click', () => navigate(-1));
+    document.getElementById('rightButton').addEventListener('click', () => navigate(1));
+  </script>
+
+</body>
+</html>
