@@ -3,7 +3,8 @@ html{
   background-size: cover;         /* Makes it fill the screen */
   background-position: center center;    /* Keeps it centered */
   background-repeat: no-repeat;   /* Prevents tiling */
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
+  min-height: 100vh; 
 }
 
 body {
