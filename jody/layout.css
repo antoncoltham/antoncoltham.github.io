@@ -48,18 +48,21 @@ nav ul {
 	padding: 0;
 	overflow: hidden;           /* Ensures floats inside behave properly */
 	background-color: #7fb3d5;  /* Blue background for nav bar */
+	border: 1px solid white;
+
 }
 
 /* Each nav item is floated left for horizontal layout */
 nav ul li {
 	float: left;
-	border: 1px solid white;
-	width: 131px;
+	border-right: 1px solid white;
+	width: 16.5%/*131px*/;
 }
 
 /* Special width for the last menu item to align evenly */
 nav ul li:last-child {
-	width: 135px;
+	width: 16.6%;/*135px;*/
+	border-right: none;
 }
 
 /* Styling for nav links inside list items */
