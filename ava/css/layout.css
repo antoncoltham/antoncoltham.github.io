@@ -170,6 +170,12 @@ img#ep3gif {
 
 }
 
+h3 {
+    font-family: 'Gothic A1', sans-serif;
+    color: #FFE81F;
+    font-weight: 600;
+}
+
 /* Input fields styling */
 #feedback input[type="text"] {
     width: 100%;
@@ -236,14 +242,14 @@ div#feedback {
     margin: 40px auto;
 }
 
-/* --- Minimal Feedback Popup Drawer --- */
+/* --- Feedback Popup Drawer --- */
 #feedback-popup {
     position: fixed;
     left: 50%;
     bottom: 18px;
     transform: translateX(-50%) translateY(70%);
     width: 60px;
-    background: #6baaf77c;
+    background: #688db9;
     border-radius: 18px 18px 0 0;
     transition: transform 0.4s cubic-bezier(.4,2,.6,1), width 0.4s;
     z-index: 9999;
@@ -258,15 +264,13 @@ div#feedback {
     position: absolute;
     right: -18px;
     top: -28px;
-    background: #6baaf77c;
-    /* Change from circle to square */
+    background: #4b75a8;
     border-radius: 8px;
     width: 44px;
     height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px #000a;
     cursor: pointer;
     user-select: none;
     z-index: 10000;
@@ -287,8 +291,33 @@ div#feedback {
     display: block;
 }
 
-#feedback-popup form {
-    margin-top: 10px;
+/* Feedback form styles inside the popup */
+#feedback-popup h3 {
+    text-align: center;
+    font-family: 'Gothic A1', sans-serif;
+    color: #FFE81F;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#feedback-popup .head p {
+    text-align: center;
+    font-family: 'Gothic A1', sans-serif;
+    color: #FFE81F;
+}
+
+#feedback-popup label,
+#feedback-popup #label-title {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Gothic A1', sans-serif;
+    color: #FFE81F;
+    background: transparent;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 6px;
+    padding-left: 2px;
+    font-weight: 500;
 }
 
 #feedback-popup input[type="text"],
@@ -308,15 +337,6 @@ div#feedback {
 #feedback-popup textarea {
     min-height: 60px;
     resize: vertical;
-    box-shadow: 1px 1px 12px gray;
-}
-
-#feedback-popup label {
-    margin-bottom: 6px;
-    display: block;
-    color: #FFE81F;
-    font-size: 16px;
-    font-weight: 500;
 }
 
 #feedback-popup #send {
@@ -324,7 +344,7 @@ div#feedback {
     height: 42px;
     margin-top: 10px;
     border-radius: 10px;
-    background-color: #4182d17c;
+    background: #547cad;
     color: #FFE81F;
     font-family: 'Gothic A1', sans-serif;
     font-size: 18px;
@@ -335,14 +355,5 @@ div#feedback {
 }
 
 #feedback-popup #send:hover {
-    background-color: #0d1335;
-}
-
-@media (max-width: 400px) {
-    #feedback-popup.open {
-        width: 96vw;
-    }
-    #feedback-content {
-        padding: 10px 4vw 10px 4vw;
-    }
+    background: #37659d;
 }

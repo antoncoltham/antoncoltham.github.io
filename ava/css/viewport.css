@@ -173,14 +173,13 @@
 
     /* Responsive section for mobile */
     section {
-        width: 98vw;
+        width: 100vw;
+        max-width: 100vw;
         min-width: 0;
-        max-width: 95vw;
         margin: auto;
-        top: 0;
         border-radius: 20px;
-        height: 1000px;
-        margin-bottom: 20px;
+        height: 1200px; /* Increased height */
+        margin-bottom: 30px;
     }
     
     /* Responsive title images for mobile */
@@ -278,6 +277,43 @@
     /* Anchor width for home sections on mobile */
     section#mobile-home1 a, section#mobile-home2 a, section#mobile-home3 a {
        width: 30%;
+    }
+
+    /* Mobile home layout for each episode */
+    section#mobile-home1,
+    section#mobile-home3 {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section#mobile-home1 {
+        margin-top: 140px;
+    }
+
+    section#mobile-home2 {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Ensure image and text take up space side by side */
+    section#mobile-home1 img#home-image,
+    section#mobile-home2 img#home-image,
+    section#mobile-home3 img#home-image {
+        width: 65%;
+        max-width: 260px;
+        margin: 0 16px;
+    }
+
+    section#mobile-home1 p#mobiletext,
+    section#mobile-home2 p#mobiletext,
+    section#mobile-home3 p#mobiletext {
+        width: 65%;
+        margin: 0 16px;
+        text-align: center;
+        font-size: 22px;
+        padding: 18px 0;
     }
 }
 

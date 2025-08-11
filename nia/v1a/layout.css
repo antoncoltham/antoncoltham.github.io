@@ -1,10 +1,5 @@
 html{
-  background-image: url("images/jungle.png");
-  background-size: cover;         /* Makes it fill the screen */
-  background-position: center center;    /* Keeps it centered */
-  background-repeat: no-repeat;   /* Prevents tiling */
-  /*background-attachment: fixed;*/
-  min-height: 100vh; 
+
 }
 
 body {
@@ -20,7 +15,10 @@ body {
 }
 
 section {
-	background-color: White;
+	background-image: url("images/river_croc.png");
+	background-size: cover;
+	height: 400px;
+	width: 800px;
 }
 
 /* Hamburger Menu */
@@ -34,24 +32,9 @@ section {
   color: white;
 }
 
-/* Title */
-.title-box {
-  text-align: center;
-  background-color: white;
-  width: fit-content;
-  padding: 10px 20px;
-  margin: 50px auto 0 auto;
-  border-radius: 5px;
-}
-
-.title-box h1 {
-  font-size: 20px;
-  color: darkorange;
-  margin: 0;
-}
 
 /* Capybara Characters */
-.capybara {
+.capybara, .croc {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -67,40 +50,45 @@ section {
   bottom: 50px;
 }
 
-.gator {
-  right: 80px;
-  bottom: 40px;
-}
+
 
 /* Speech Bubbles */
 .speech {
   background: white;
   border-radius: 10px;
   padding: 12px;
-  border: 2px solid #444;
+  border: 2px solid red;
   width: 200px;
   font-size: 14px;
   position: relative;
+}
+
+.speech.left {
   left: 90px;
   top: 0px;
+}
+
+.speech.right {
+  left: 350px;
+  top: 70px;
 }
 
 .speech.left::before {
   content: '';
   position: absolute;
-  left: -15px;
-  top: 20px;
+  left: 7px;
+  top: 90px;
   border: 10px solid transparent;
-  border-right-color: white;
+  border-top-color: red;
 }
 
 .speech.right::before {
   content: '';
   position: absolute;
-  right: -15px;
-  top: 20px;
+  right: 20px;
+  top: 166px;
   border: 10px solid transparent;
-  border-left-color: white;
+  border-top-color: red;
 }
 
 /* Navigation Arrow Button */
@@ -118,4 +106,10 @@ section {
   height: 60px;
   cursor: pointer;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+}
+
+audio{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
 }

@@ -1,0 +1,359 @@
+/*---------------------Google Fonts-----------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*------------------------Headers--------------------------*/
+/* Center all h1 and h2 */
+h1,
+h2 {
+  text-align: center;
+}
+
+/* Remove bottom margin from h1 */
+h1 {
+  margin-bottom: 0px;
+}
+
+/* Remove top margin from h2 inside header */
+header h2 {
+  margin-top: 0px;
+}
+
+/* Style for all h2 */
+h2 {
+  font-family: 'Gothic A1';
+  font-size: 30px;
+  color: #FFE81F;
+  font-weight: 500;
+}
+
+/* Center all images and add top padding */
+img {
+  padding-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*------------------------Content Pages Titles------------------------*/
+/* Title images for each episode */
+img#ep1_title,
+img#ep2_title,
+img#ep3_title {
+  padding-bottom: 10px;
+  width: 580px;
+  padding: 0px;
+  padding-top: 100px;
+}
+
+/*------------------------Backgrounds------------------------*/
+/* Set background image and properties for all pages */
+html {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Set specific background for each page */
+html#index,
+html#episode1,
+html#episode2,
+html#episode3 {
+  background-image: url("../images/spacebackground5.jpg");
+}
+
+/*-----------------------Sections--------------------------*/
+/* Main section styling */
+section {
+  background-color: #6baaf77c;
+  height: 500px;
+  width: 800px;
+  margin: 20px auto;
+  position: relative;
+  top: -100px;
+  border-radius: 40px;
+  min-width: 0;
+  margin-top: 200px;
+}
+
+/*-----------------------Paragraphs--------------------------*/
+/* General paragraph styling */
+p {
+  font-family: 'Gothic A1';
+  font-size: 20px;
+  color: #FFE81F;
+  font-weight: 700;
+  text-align: center;
+  float: right;
+}
+
+/* Paragraphs inside .text_right */
+.text_right p {
+  font-family: 'Gothic A1';
+  font-size: 19.5px;
+  color: #FFE81F;
+  font-weight: 600;
+  text-align: center;
+  float: right;
+  margin-top: 0px;
+  margin-left: 17.5px;
+  margin-right: 17.5px;
+  margin-bottom: 14px;
+}
+
+/*-----------------------Image and Text Layout--------------------------*/
+/* Left image container */
+div.image_left {
+  margin-top: 70px;
+  float: left;
+  margin-left: 50px;
+}
+
+/* Right text container */
+div.text_right {
+  margin-top: 70px;
+  width: 450px;
+  float: right;
+  margin-right: 50px;
+}
+
+/*-----------------------Images and GIFs on Content Pages--------------------------*/
+/* Episode 1 GIF and poster */
+img#ep1gif {
+  width: 90%;
+  margin-top: 10px;
+}
+img#ep1poster {
+  width: 240px;
+}
+
+/* Episode 2 GIF and poster */
+img#ep2gif {
+  width: 405px;
+  height: 170px;
+}
+img#ep2poster {
+  width: 240px;
+}
+
+/* Episode 3 GIF and poster */
+img#ep3poster {
+  width: 240px;
+}
+img#ep3gif {
+  width: 405px;
+  height: 170px;
+}
+/*-----------------------Feedback Form--------------------------*/
+
+/* Center headings in the feedback form */
+#feedback h3,
+#feedback .head p {
+    text-align: center;
+    font-family: 'Gothic A1', sans-serif;
+    color: #FFE81F;
+}
+
+/* Feedback form label styling */
+#feedback label,
+#feedback #label-title {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Gothic A1', sans-serif;
+    color: #FFE81F;
+    background: transparent;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 6px;
+    padding-left: 2px;
+    font-weight: 500;
+
+}
+
+h3 {
+    font-family: 'Gothic A1', sans-serif;
+    color: #FFE81F;
+    font-weight: 600;
+}
+
+/* Input fields styling */
+#feedback input[type="text"] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 400;
+    box-sizing: border-box;
+    background: #fbfaf6;
+}
+
+/* Textarea styling with rounded edges */
+#feedback textarea {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    resize: vertical;
+    background: #fbfaf6;
+    font-weight: 400;
+}
+
+/* Submit button styling - darker blue */
+#feedback #send {
+    width: 100%;
+    height: 45px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: #4182d17c; /* dark blue */
+    color: #FFE81F;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#feedback #send:hover {
+    background-color: #255da056;
+}
+
+/* Style the feedback form container */
+div#feedback {
+    text-align: center;
+    height: 520px;
+    width: 330px;
+    padding: 20px 25px 20px 15px;
+    background-color: #6baaf77c;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    float: left;
+}
+
+/* Style the outer container for the feedback form */
+.container {
+    width: auto;
+    margin: 40px auto;
+}
+
+/* --- Feedback Popup Drawer --- */
+#feedback-popup {
+    position: fixed;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%) translateY(70%);
+    width: 60px;
+    background: #688db9;
+    border-radius: 18px 18px 0 0;
+    transition: transform 0.4s cubic-bezier(.4,2,.6,1), width 0.4s;
+    z-index: 9999;
+}
+
+#feedback-popup.open {
+    width: 340px;
+    transform: translateX(-50%) translateY(0%);
+}
+
+#feedback-toggle {
+    position: absolute;
+    right: -18px;
+    top: -28px;
+    background: #4b75a8;
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10000;
+}
+
+#feedback-toggle #arrow {
+    font-size: 32px;
+    color: #FFE81F;
+    line-height: 1;
+}
+
+#feedback-content {
+    display: none;
+    padding: 18px 24px 24px 24px;
+}
+
+#feedback-popup.open #feedback-content {
+    display: block;
+}
+
+/* Feedback form styles inside the popup */
+#feedback-popup h3 {
+    text-align: center;
+    font-family: 'Gothic A1', sans-serif;
+    color: #FFE81F;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#feedback-popup .head p {
+    text-align: center;
+    font-family: 'Gothic A1', sans-serif;
+    color: #FFE81F;
+}
+
+#feedback-popup label,
+#feedback-popup #label-title {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Gothic A1', sans-serif;
+    color: #FFE81F;
+    background: transparent;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 6px;
+    padding-left: 2px;
+    font-weight: 500;
+}
+
+#feedback-popup input[type="text"],
+#feedback-popup textarea {
+    background: #fbfaf6;
+    color: #000;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 8px 10px;
+    font-size: 15px;
+    font-family: 'Gothic A1', sans-serif;
+    box-sizing: border-box;
+}
+
+#feedback-popup textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+#feedback-popup #send {
+    width: 100%;
+    height: 42px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: #547cad;
+    color: #FFE81F;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#feedback-popup #send:hover {
+    background: #37659d;
+}
