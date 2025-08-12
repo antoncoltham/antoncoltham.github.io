@@ -23,7 +23,7 @@ $headers .= 'Cc:'. $email . "\r\n"; // Carbon copy to Sender
 // Message lines should not exceed 70 characters (PHP rule), so wrap it
 $message = wordwrap($message, 70);
 // Send Mail By PHP Mail Function
-mail("your email address", $subject, $message, $headers);
+mail("ava.white@solwaycollege.school.nz", $subject, $message, $headers);
 echo "Your mail has been sent successfully ! Thank you" . " -" . "<a href='index.html' style='text-decoration:none;color:#ff0099;'> Return Home</a>";;
 }
 }
