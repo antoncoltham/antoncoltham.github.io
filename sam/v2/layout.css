@@ -1,0 +1,148 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+}
+
+html {
+	background-image: url('images/bg.png');
+	background-size: cover;
+}
+
+/* Background */
+body {
+  /*background: linear-gradient(to bottom right, #ffeb99, #f7c948);*/
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 900px;
+  margin: auto;
+}
+
+/* Main White Container */
+.container {
+  background: white;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  border: green solid 5px;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(to bottom, #9df572, #63d64a);
+  border-radius: 20px 20px 20px 20px;
+  padding: 20px;
+  display: flex;
+ /* align-items: center;*/
+  justify-content: space-between;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  border: green solid 5px;
+  text-align: center;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo span {
+  margin-left: 10px;
+}
+
+.header .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #4caf50;
+  border: 3px solid white;
+}
+
+/* Welcome Message */
+.welcome {
+  margin: 20px 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.description {
+  background: #c8f7a2;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border: green solid 5px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0077aa;
+  margin-bottom: 20px;
+}
+
+/* Buttons Section */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.button-box {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+}
+
+.button-box button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.button-box button:hover {
+  transform: scale(1.05);
+}
+
+.info-btn {
+  background: linear-gradient(to bottom, #d36bf8, #9d38cc);
+}
+
+.game-btn {
+  background: linear-gradient(to bottom, #ffae42, #e67800);
+}
+
+.credits-btn {
+  background: linear-gradient(to bottom, #57b0ff, #005fbb);
+}
+
+.button-box p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  background: #fff6d6;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #333;
+}
