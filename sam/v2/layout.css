@@ -41,8 +41,8 @@ body {
   border-radius: 20px 20px 20px 20px;
   padding: 20px;
   display: flex;
- /* align-items: center;*/
-  justify-content: space-between;
+  align-items: center;  /*########*/
+  /*justify-content: space-between;################*/
   color: white;
   font-size: 2rem;
   font-weight: bold;
@@ -53,9 +53,14 @@ body {
 .header .logo {
   display: flex;
   align-items: center;
+  width: 100%;  /*########*/
 }
 
-.header .logo span {
+.logo p{
+	width: 100%;  /*########*/
+}
+
+.header .logo p {
   margin-left: 10px;
 }
 
