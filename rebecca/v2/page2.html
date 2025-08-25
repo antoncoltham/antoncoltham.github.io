@@ -3,70 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="layout.css">
   <title>Page 2 - Severance Cast</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #007491;
-      font-family: Arial, sans-serif;
-      color: white;
-      overflow-x: hidden;
-    }
 
-    .arrow-btn {
-      position: fixed;
-      bottom: 40px;
-      font-size: 1.5rem;
-      border-radius: 50px;
-      background-color: white;
-      color: #007491;
-      border: none;
-      cursor: pointer;
-      padding: 10px 20px;
-      z-index: 1000;
-      user-select: none;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    #leftButton { left: 40px; }
-    #rightButton { right: 40px; }
-
-    .characters {
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-end;
-      margin-top: 200px;
-      padding: 0 40px;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .character {
-      position: relative;
-      width: 100px;
-      height: 200px;
-      background-color: white;
-      overflow: hidden;
-      border-radius: 5px;
-    }
-
-    .character img {
-      position: absolute;
-      width: 20%px;
-      height: auto;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .character.outside-left img {
-      left: -30px;
-    }
-
-    .character.outside-right img {
-      left: -10px;
-    }
-  </style>
 </head>
 <body>
 
@@ -88,6 +27,9 @@
       <img src="milchick.png" alt="Milchick" />
     </div>
   </div>
+  <section>
+	<p>Some incredible information about the Severence characters that will be entertaining and ...</p>
+
 
   <button id="leftButton" class="arrow-btn">←</button>
   <button id="rightButton" class="arrow-btn">→</button>
