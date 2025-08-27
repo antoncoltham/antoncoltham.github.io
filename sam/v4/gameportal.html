@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Papa's Games - Game Portal</title>
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body class="game-portal-page">
+  <!-- Menu Button + Dropdown -->
+  <div class="menu-container">
+    <button class="game-portal-menu-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div id="menu" class="menu-dropdown">
+      <div class="menu-item-wrapper"><a href="index.html" class="menu-item">Main Menu</a></div>
+      <div class="menu-item-wrapper"><a href="info.html" class="menu-item">Information</a></div>
+      <div class="menu-item-wrapper"><a href="gameportal.html" class="menu-item">Game Portal</a></div>
+      <div class="menu-item-wrapper"><a href="credits.html" class="menu-item">Credits</a></div>
+    </div>
+  </div>
+
+  <!-- Game Portal Section -->
+  <div class="game-portal-container">
+    <div class="game-portal-header">
+      <div class="game-portal-title">Game Portal</div>
+    </div>
+    <div class="game-portal-description">
+      Welcome to the game portal! Here you can see all the current papa's games that you can play online for free. You can cycle through the games with the arrows, and the option to play the game yourself can be accessed by clicking on the game.
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel-wrapper">
+      <button class="carousel-arrow left" onclick="prevGame()">&#9664;</button>
+      <div class="carousel">
+        <div class="carousel-track" id="carousel-track"></div>
+      </div>
+      <button class="carousel-arrow right" onclick="nextGame()">&#9654;</button>
+    </div>
+
+    <!-- Game Description -->
+    <div id="game-description" class="game-description"></div>
+  </div>
+
+  <script>
+    // ===== MENU TOGGLE =====
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+
+    // ===== GAME DATA =====
+    const games = [
+      { title: "Papa's Donuteria", desc: "Papa's Donuteria is the tenth game in the Papa Louie restaurant series.<br><em>\"Roller Coasters speed overhead as you embark on a donut-cooking adventure!\"</em>", img: "images/donuteria.png" },
+      { title: "Papa's Wingeria", desc: "Papa's Wingeria lets you run your own wing restaurant.<br><em>\"Fry, toss, and sauce your way to chicken wing glory!\"</em>", img: "images/wingeria.png" },
+      { title: "Papa's Scooperia", desc: "Papa's Scooperia is a sweet ice cream parlor experience.<br><em>\"Scoop, top, and serve up sundaes in style!\"</em>", img: "images/scooperia.png" },
+      { title: "Papa's Sushiria", desc: "Papa's Sushiria brings sushi-making fun!<br><em>\"Slice, roll, and serve up sushi masterpieces!\"</em>", img: "images/sushiria.png" },
+      { title: "Papa's Bakeria", desc: "Papa's Bakeria is all about pies!<br><em>\"Bake, fill, and decorate pies for hungry customers!\"</em>", img: "images/bakeria.png" },
+      { title: "Papa's Burgeria", desc: "Papa's Burgeria puts you on the grill.<br><em>\"Flip burgers, add toppings, and serve with fries!\"</em>", img: "images/burgeria.png" },
+      { title: "Papa's Cheeseria", desc: "Papa's Cheeseria features gooey grilled cheese.<br><em>\"Grill up cheesy creations for your customers!\"</em>", img: "images/cheeseria.png" },
+      { title: "Papa's Cupcakeria", desc: "Papa's Cupcakeria lets you bake cupcakes.<br><em>\"Mix, bake, and decorate cupcakes in style!\"</em>", img: "images/cupcakeria.png" },
+      { title: "Papa's Freezeria", desc: "Papa's Freezeria serves frozen treats.<br><em>\"Blend, mix, and top sundaes to perfection!\"</em>", img: "images/freezeria.png" },
+      { title: "Papa's Hot Doggeria", desc: "Papa's Hot Doggeria takes you to the ballpark.<br><em>\"Grill hot dogs and serve snacks to fans!\"</em>", img: "images/hotdoggeria.png" },
+      { title: "Papa's Pancakeria", desc: "Papa's Pancakeria is a breakfast paradise.<br><em>\"Stack pancakes, waffles, and French toast!\"</em>", img: "images/pancakeria.png" },
+      { title: "Papa's Pastaria", desc: "Papa's Pastaria lets you cook Italian dishes.<br><em>\"Boil pasta, add sauces, and serve with bread!\"</em>", img: "images/pastaria.png" },
+      { title: "Papa's Pizzeria", desc: "Papa's Pizzeria is the classic pizza-making game.<br><em>\"Top, bake, and slice pizzas just right!\"</em>", img: "images/pizzeria.png" },
+      { title: "Papa's Taco Mia", desc: "Papa's Taco Mia brings taco fun.<br><em>\"Stuff tacos with meats, veggies, and sauces!\"</em>", img: "images/taco-mia.png" }
+    ];
+
+    const track = document.getElementById("carousel-track");
+    const descriptionBox = document.getElementById("game-description");
+
+    // ===== BUILD CAROUSEL =====
+    function buildCarousel() {
+      track.innerHTML = "";
+      games.forEach(game => {
+        const item = document.createElement("div");
+        item.className = "carousel-item";
+        item.innerHTML = `<img src="${game.img}" alt="${game.title}">`;
+        track.appendChild(item);
+      });
+    }
+
+    let currentIndex = Math.floor(games.length / 2); // start in the middle
+
+    function updateCarousel() {
+      const items = document.querySelectorAll(".carousel-item");
+      items.forEach(item => item.classList.remove("active"));
+      items[currentIndex].classList.add("active");
+
+      const offset = -(currentIndex * 170 - (500 / 2 - 75));
+      track.style.transition = "transform 0.5s ease";
+      track.style.transform = `translateX(${offset}px)`;
+
+      // update description
+      descriptionBox.innerHTML = games[currentIndex].desc;
+    }
+
+    function prevGame() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    }
+
+    function nextGame() {
+      if (currentIndex < games.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    }
+
+    // init
+    buildCarousel();
+    updateCarousel();
+  </script>
+</body>
+</html>

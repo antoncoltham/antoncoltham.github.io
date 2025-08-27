@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="layout.css">
   <title>Cool Animated Website - Page 1</title>
   <style>
- 
+   
   </style>
 </head>
 <body>
@@ -23,10 +23,10 @@
   </div>
 
   <h1 id="title">Welcome to the world of Severance</h1>
-  <p id="description">The show that is now boring</p>
+  <p id="description">A brief introduction to the 2 season show</p>
   <button id="dontClick">Don't Click Me!</button>
 
- <button id="leftButton" class="nav-arrow">⬅️</button>
+  <button id="leftButton" class="nav-arrow">⬅️</button>
   <button id="rightButton" class="nav-arrow">➡️</button>
 
   <script>
@@ -35,25 +35,25 @@
         title: "Welcome to the world of Severance",
         description: "The show that is now boring",
         button: "Don't Click Me!",
-        idiot: "idiot"
+        lol: "lol"
       },
       fr: {
         title: "Bienvenue dans le monde de Severance",
         description: "L'émission qui est maintenant ennuyeuse",
         button: "Ne cliquez pas sur moi !",
-        idiot: "idiot"
+        lol: "lol"
       },
       mi: {
         title: "Nau mai ki te ao o Severance",
         description: "Kua hōhā te whakaaturanga ināianei",
         button: "Kaua e pāwhiri i ahau!",
-        idiot: "he mōrikarika koe"
+        lol: "lol"
       },
       es: {
         title: "Bienvenido al mundo de Severance",
         description: "El programa que ahora es aburrido",
         button: "¡No me hagas clic!",
-        idiot: "idiota"
+        lol: "lol"
       },
       de: {
         title: "Willkommen in der Welt von Severance",
@@ -65,19 +65,19 @@
         title: "セヴェランスの世界へようこそ",
         description: "今や退屈な番組です",
         button: "クリックしないで！",
-        idiot: "バカ"
+        lol: "バカ"
       },
       ko: {
         title: "세버런스의 세계에 오신 것을 환영합니다",
         description: "이제 지루한 쇼입니다",
         button: "누르지 마세요!",
-        idiot: "바보"
+        lol: "바보"
       },
       it: {
         title: "Benvenuto nel mondo di Severance",
         description: "Lo show che ormai è noioso",
         button: "Non cliccarmi!",
-        idiot: "idiota"
+        lol: "lol"
       }
     };
 
@@ -98,7 +98,7 @@
     });
 
     dontClickBtn.addEventListener('click', () => {
-      const word = translations[currentLang].idiot || "idiot";
+      const word = translations[currentLang].idiot || "lol";
       const newWindow = window.open('', '_blank');
       newWindow.document.write(`
         <!DOCTYPE html>
@@ -143,3 +143,4 @@
   </script>
 </body>
 </html>
+

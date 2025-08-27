@@ -1,0 +1,503 @@
+/* ===Import Dela Gothic One===*/
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+/* ====General reset====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Dela Gothic One', sans-serif;
+}
+
+/* ====HTML background====*/
+html {
+  background-image: url('images/bg.png');
+  background-size: cover;
+}
+
+/* ====Body====*/
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 900px;
+  margin: auto;
+}
+
+/* ====Main white container====*/
+.container {
+  background: white;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  border: #0B7731 solid 4px;
+}
+
+/* =====Header======*/
+.header {
+  background: linear-gradient(to bottom, #37C16B, #B0FF61);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;        /* vertically center everything */
+  justify-content: space-between;
+  color: white;
+  font-size: 2rem;
+  border: #0B7731 solid 4px;
+  text-align: center;
+  text-shadow: 2px 2px #579929;
+}
+
+/* Force the title span to the center */
+.header span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header .icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #4caf50;
+  border: 3px solid white;
+  background-image: url('images/welcome.png');
+  background-size: cover;
+}
+
+/* ===Welcome message===*/
+.welcome {
+  margin: 20px 0;
+  font-size: 1.4rem;
+  color: #0B7731;
+}
+
+/* ====Description box====*/
+.description {
+  background: #c8f7a2;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #13572B;
+  margin-bottom: 20px;
+  border: #0B7731 solid 4px;
+}
+
+/* =========================
+   Section Title
+   ========================= */
+.section-title {
+  font-size: 1.3rem;
+  color: #0B7731;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   Buttons Layout
+   ========================= */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   Button Box
+   ========================= */
+.button-box {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+}
+
+/* =========================
+   Button Styles
+   ========================= */
+.button-box button {
+  width: 80%;
+  padding: 15px;
+  border-radius: 46px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.button-box button:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   Button Variants
+   ========================= */
+.info-btn {
+  background: linear-gradient(to bottom, #A245C2, #DB91FF);
+  border: 5px solid;
+  border-color: #67237E;
+  text-shadow: 2px 2px #8234A8;
+}
+
+.game-btn {
+  background: linear-gradient(to bottom, #FFE57F, #FFA14E);
+  border: 5px solid;
+  border-color: #C96E1D;
+  text-shadow: 2px 2px #AE794A;
+}
+
+.credits-btn {
+  background: linear-gradient(to bottom, #80D0FF, #008BDF);
+  border: 5px solid;
+  border-color: #005E96;
+  text-shadow: 2px 2px #4066B1;
+}
+
+/* =========================
+   Button Captions
+   ========================= */
+.button-box p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  background: #FFEA90;
+  padding: 10px;
+  border-radius: 10px;
+  color: #6E5010;
+  border: #CCAD2A solid 4px;
+}
+
+/* =========================
+   Hamburger Menu Button
+   ========================= */
+.menu-container {
+  position: fixed;   /* keep in top-left corner */
+  top: 20px;
+  left: 20px;
+  z-index: 1000;     /* stay on top */
+}
+
+.menu-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #37C16B, #B0FF61);
+  border: 4px solid #0B7731;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.05);
+}
+
+.menu-btn span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* =========================
+   Dropdown Menu
+   ========================= */
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background: #fff;
+  border: 3px solid #AE7577;
+  border-radius: 15px;
+  min-width: 220px;
+  padding: 15px 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  z-index: 10;
+}
+
+.menu-dropdown.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   Menu Header
+   ========================= */
+.menu-header {
+  display: flex;
+  justify-content: center;   /* circle centered */
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Decorative circle */
+.close-btn {
+  background: none;
+  border: 3px solid #b97a7a;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  pointer-events: none;   /* not clickable */
+}
+
+.close-btn::after {
+  content: ""; /* empty */
+}
+
+hr {
+  border: none;
+  border-top: 2px dashed #e0baba;
+  margin: 10px 0;
+}
+
+/* =========================
+   Menu Items (Buttons)
+   ========================= */
+.menu-item-wrapper {
+  position: relative;
+  margin: 20px 0; /* spacing between bands */
+}
+
+/* Pink horizontal bar behind buttons */
+.menu-item-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: 65px; /* slightly thicker than buttons */
+  background: #FFDADB;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.menu-item {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 46px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border: 4px solid;
+  transition: transform 0.2s ease;
+  z-index: 1; /* above pink bar */
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+/* Variants */
+
+.menu-item.mainmenu-btn {
+  background: linear-gradient(to bottom, #B0FF61, #37C16B); /* light green gradient */
+  border-color: #067B2C;
+  text-shadow: 2px 2px #579929;
+}
+
+.menu-item.info-btn {
+  background: linear-gradient(to bottom, #A245C2, #DB91FF);
+  border-color: #67237E;
+  text-shadow: 2px 2px #8234A8;
+}
+
+.menu-item.game-btn {
+  background: linear-gradient(to bottom, #FFE57F, #FFA14E);
+  border-color: #C96E1D;
+  text-shadow: 2px 2px #AE794A;
+}
+
+.menu-item.credits-btn {
+  background: linear-gradient(to bottom, #80D0FF, #008BDF);
+  border-color: #005E96;
+  text-shadow: 2px 2px #4066B1;
+}
+
+
+
+/* ====== GAME PORTAL PAGE ================================*/
+
+
+/* =========================
+   Header (Game Portal)
+   ========================= */
+.game-portal-header {
+  background: linear-gradient(to bottom, #FFA14E, #FFE57F);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;        
+  justify-content: space-between;
+  color: #ffffff;              /* force heading text to white */
+  font-size: 2rem;
+  border: #C96E1D solid 4px;
+  text-align: center;
+  text-shadow: 2px 2px #00000066; /* subtle shadow for readability */
+  margin-bottom: 18px;         /* add spacing below header */
+}
+
+
+/* =========================
+   Description Box
+   ========================= */
+.game-portal-description {
+  background: #FFE57F;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #7E430F;
+  margin-bottom: 30px;
+  border: #C96E1D solid 4px;
+}
+
+/* ===== Game Portal Layout ===== */
+.game-portal-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #fffaf6;
+  border: #C96E1D solid 4px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.game-portal-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px #EA964C;
+}
+
+/* ===== Carousel ===== */
+.carousel-wrapper {
+  display: flex;
+  background: #FFECA1;
+  align-items: center;
+  padding: 25px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 700px;
+  position: relative;
+  border: #C96E1D solid 4px;
+  border-radius: 15px;
+}
+
+.carousel-arrow {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #C96E1D;
+  transition: transform 0.2s;
+  z-index: 2;
+}
+.carousel-arrow:hover {
+  transform: scale(1.2);
+}
+
+.carousel {
+  overflow: hidden;
+  width: 500px;
+  padding: 15px 0;
+}
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 150px;
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-item.active {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+/* ===== Game Description Box ===== */
+.game-description {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background: linear-gradient(to bottom, #FFE57F, #FFA14E);
+  border: #C96E1D solid 4px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1rem;
+  color: #7E430F;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+/* Title inside description (if needed later) */
+.game-description h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #37C16B;
+  font-weight: bold;
+}
+
+
+	
+/*==========Game portal menu button============*/
+.game-portal-menu-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #FFA14E, #FFE57F);
+  border: 4px solid #C96E1D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.game-portal-menu-btn:hover {
+  transform: scale(1.05);
+}
+
+.game-portal-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
+
+

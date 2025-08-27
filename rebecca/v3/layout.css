@@ -177,10 +177,6 @@ button#dontClick:hover {
 .page3 {
   background-image: url("images/bg3.webp");
   background-size: cover;
-  position: absolute;
-  top: 30px;
-  height: 80%;
-  width: 80%;
 }
 
 .speech-box {
@@ -193,11 +189,6 @@ button#dontClick:hover {
   font-weight: bold;
   box-shadow: 4px 4px 0px #004c5c;
   transition: transform 0.3s ease;
-  position: absolute;
-  bottom: 30px;
-  left: 0; 
-  right: 0; 
-  margin-inline: auto;
 }
 .speech-box:hover { transform: scale(1.03); }
 
