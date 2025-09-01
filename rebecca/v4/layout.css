@@ -1,0 +1,240 @@
+/* ========= GLOBAL STYLES & ANIMATIONS ============= */
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #007491;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 0 20px;
+  animation: fadeIn 2s ease forwards;
+}
+
+p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  animation: fadeIn 3s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+/* ====== Buttons ====== */
+
+button#dontClick {
+  margin-top: 40px;
+  padding: 15px 40px;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  background: white;
+  color: #007491;
+  font-weight: bold;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  animation: bounce 2s infinite;
+  transition: background 0.3s, color 0.3s;
+}
+
+button#dontClick:hover {
+  background: #005f73;
+  color: white;
+  box-shadow: 0 12px 25px rgba(0, 95, 115, 0.7);
+}
+
+/* Navigation arrows */
+.nav-arrow,
+.arrow-btn {
+  position: fixed;
+  bottom: 40px;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  background-color: white;
+  color: #007491;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  user-select: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-arrow { animation: bounce 3s infinite; }
+
+#leftButton { left: 40px; }
+#rightButton { right: 40px; }
+
+#leftButton:hover,
+#rightButton:hover {
+  background-color: #005f73;
+  color: white;
+}
+
+/* ===== Language Selector ===== */
+.language-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #007491;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  user-select: none;
+}
+
+.language-options {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  background: #005f73;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 9;
+}
+
+.language-options button {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.3s;
+  font-size: 1rem;
+}
+
+.language-options button:hover { color: #facc15; }
+
+.language-selector:hover + .language-options,
+.language-options:hover { display: flex; }
+
+/* ========= CHARACTERS SECTION ========= */
+.characters {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 0 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.character {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.character img {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.character.outside-left img { left: -30px; }
+.character.outside-right img { left: -10px; }
+
+/* ========= PAGE-SPECIFIC OVERRIDES ========= */
+
+/* PAGE 3 */
+.page3 {
+  background-image: url("images/bg3.webp");
+  background-size: cover;
+  position: absolute;
+  top: 30px;
+  height: 80%;
+  width: 80%;
+  
+}
+
+.speech-box {
+  background-color: white;
+  color: #007491;
+  border-radius: 12px;
+  padding: 20px 30px;
+  max-width: 500px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 4px 4px 0px #004c5c;
+  transition: transform 0.3s ease;
+ 
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+}
+.speech-box:hover { transform: scale(1.03); }
+
+/* PAGE 4 */
+.page4 .speech-box {
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+  border-radius: 10px;
+  font-style: italic;
+  max-width: 600px;
+  transition: background 0.3s ease;
+}
+.page4 .speech-box:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* PAGE 5 */
+.speech-bubble {
+  position: relative;
+  background: white;
+  color: #007491;
+  border-radius: 20px;
+  padding: 20px 30px;
+  max-width: 500px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 4px 4px 0px #004c5c;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 12px solid transparent;
+  border-top-color: white;
+}

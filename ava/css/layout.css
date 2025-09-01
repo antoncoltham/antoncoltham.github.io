@@ -246,24 +246,29 @@ div#feedback {
 #feedback-popup {
     position: fixed;
     left: 50%;
-    bottom: 18px;
-    transform: translateX(-50%) translateY(70%);
+    bottom: 0px;
+    transform: translateX(-50%);
     width: 60px;
-    background: #688db9;
+    height: 44px; /* Only show the toggle button */
+    background: transparent; /* No box visible */
     border-radius: 18px 18px 0 0;
-    transition: transform 0.4s cubic-bezier(.4,2,.6,1), width 0.4s;
+    transition: width 0.4s, height 0.4s, background 0.4s;
     z-index: 9999;
+    overflow: visible;
 }
 
 #feedback-popup.open {
     width: 340px;
+    height: auto;
+    background: #688db9; /* Show the box when open */
     transform: translateX(-50%) translateY(0%);
 }
 
+/* Keep the toggle button visible and centered */
 #feedback-toggle {
-    position: absolute;
-    right: -18px;
+    position: relative;
     top: -28px;
+    margin: 0 auto;
     background: #4b75a8;
     border-radius: 8px;
     width: 44px;

@@ -1,0 +1,77 @@
+/*-----------------popups.css--------------*/
+
+/* Main map container: centers and limits width */
+div#home_map {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Tooltip hotspot containers: absolutely positioned over map */
+div[data-tooltip] {
+    position: absolute;
+    font-size: 1.2em;
+}
+
+/* Hide tooltip popups by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+/* Position popup for Episode I */
+div#ep1[data-tooltip]:after {
+    left: 120px;
+    top: -40px;
+    position: absolute;
+}
+
+/* Position popup for Episode II */
+div#ep2[data-tooltip]:after {
+    left: 150px;
+    top: 60px;
+    position: absolute;
+}
+
+/* Position popup for Episode III */
+div#ep3[data-tooltip]:after {
+    left: -110px;
+    top: 70px;
+    position: absolute;
+}
+
+/* Tooltip popup styling and content */
+[data-tooltip]:after {
+    content: attr(data-tooltip-label) ":\A" attr(data-tooltip-message);
+    left: 0;
+    margin-top: 2em;
+    padding: 7px 15px;
+    white-space: pre-wrap;
+    width: 200px;
+    border-radius: 8px;
+    font-family: 'Gothic A1';
+    color: #FFE81F;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Show tooltip popup on hover */
+[data-tooltip]:hover:after,
+[data-tooltip]:hover:before {
+    display: block;
+}
+
+/* Map image: responsive sizing */
+#home_map img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hotspot clickable areas: absolutely positioned */
+.planet-hotspot {
+    position: absolute;
+}

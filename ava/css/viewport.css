@@ -255,7 +255,7 @@
     }
 
     /* Home image styling for mobile */
-    img#home-image {
+    img.home-image {
         display: block;
         margin: 0 auto 10px auto;
         max-width: 100%;
