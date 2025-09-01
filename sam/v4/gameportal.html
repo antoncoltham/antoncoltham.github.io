@@ -51,9 +51,12 @@
       document.getElementById("menu").classList.toggle("show");
     }
 
+
+
+
     // ===== GAME DATA =====
     const games = [
-      { title: "Papa's Donuteria", desc: "Papa's Donuteria is the tenth game in the Papa Louie restaurant series.<br><em>\"Roller Coasters speed overhead as you embark on a donut-cooking adventure!\"</em>", img: "images/donuteria.png" },
+        { title: "Papa's Donuteria", desc: "Papa's Donuteria is the tenth game in the Papa Louie restaurant series.<br><em>\"Roller Coasters speed overhead as you embark on a donut-cooking adventure!\"</em>", img: "images/donuteria.png", url: "https://example.com/donuteria" },
       { title: "Papa's Wingeria", desc: "Papa's Wingeria lets you run your own wing restaurant.<br><em>\"Fry, toss, and sauce your way to chicken wing glory!\"</em>", img: "images/wingeria.png" },
       { title: "Papa's Scooperia", desc: "Papa's Scooperia is a sweet ice cream parlor experience.<br><em>\"Scoop, top, and serve up sundaes in style!\"</em>", img: "images/scooperia.png" },
       { title: "Papa's Sushiria", desc: "Papa's Sushiria brings sushi-making fun!<br><em>\"Slice, roll, and serve up sushi masterpieces!\"</em>", img: "images/sushiria.png" },
@@ -73,15 +76,20 @@
     const descriptionBox = document.getElementById("game-description");
 
     // ===== BUILD CAROUSEL =====
-    function buildCarousel() {
-      track.innerHTML = "";
-      games.forEach(game => {
-        const item = document.createElement("div");
-        item.className = "carousel-item";
-        item.innerHTML = `<img src="${game.img}" alt="${game.title}">`;
-        track.appendChild(item);
-      });
-    }
+function buildCarousel() {
+  track.innerHTML = "";
+  games.forEach(game => {
+    const item = document.createElement("div");
+    item.className = "carousel-item";
+    item.innerHTML = `
+      <a href="${game.url}" target="_blank">
+        <img src="${game.img}" alt="${game.title}">
+      </a>
+    `;
+    track.appendChild(item);
+  });
+}
+
 
     let currentIndex = Math.floor(games.length / 2); // start in the middle
 
