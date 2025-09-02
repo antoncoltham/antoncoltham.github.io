@@ -76,19 +76,19 @@
     const descriptionBox = document.getElementById("game-description");
 
     // ===== BUILD CAROUSEL =====
-function buildCarousel() {
-  track.innerHTML = "";
-  games.forEach(game => {
-    const item = document.createElement("div");
-    item.className = "carousel-item";
-    item.innerHTML = `
-      <a href="${game.url}" target="_blank">
-        <img src="${game.img}" alt="${game.title}">
-      </a>
-    `;
-    track.appendChild(item);
-  });
-}
+	function buildCarousel() {
+	  track.innerHTML = "";
+	  games.forEach(game => {
+		const item = document.createElement("div");
+		item.className = "carousel-item";
+		item.innerHTML = `
+		  <a href="${game.url}" target="_blank">
+			<img src="${game.img}" alt="${game.title}">
+		  </a>
+		`;
+		track.appendChild(item);
+	  });
+	}
 
 
     let currentIndex = Math.floor(games.length / 2); // start in the middle
