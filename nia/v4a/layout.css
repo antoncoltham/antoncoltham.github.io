@@ -65,12 +65,16 @@ section {
 }
 .home {
   font-size: 26px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   position: absolute;
   top: 15px;
   left: 20px;
   z-index: 2;
-  color: white;
+  color: black;
 }
+
+
+	
 
 a {
 	text-decoration:none;
