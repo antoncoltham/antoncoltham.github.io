@@ -1,0 +1,668 @@
+/* ===========================================
+   Google Font Import
+   =========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+/* ===========================================
+   General Reset
+   =========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Dela Gothic One', sans-serif; /* Primary font for website */
+}
+
+/* ===========================================
+   HTML Backgrounds
+   =========================================== */
+html {
+  background-image: url('images/bg.png'); /* Main page background */
+  background-size: cover;
+}
+
+html#info {
+  background-image: url('images/bg2.png'); /* Game portal specific background */
+}
+
+html#game {
+  background-image: url('images/bg3.png'); /* Game portal specific background */
+}
+
+html#credits {
+  background-image: url('images/bg4.png'); /* Game portal specific background */
+}
+
+/* ===========================================
+   Body Layout
+   =========================================== */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 900px;
+  margin: auto;
+}
+
+/* ===========================================
+   Main White Container
+   =========================================== */
+.container {
+  background: white;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  border: #0B7731 solid 4px;
+}
+
+/* ===========================================
+   Header Section
+   =========================================== */
+.header {
+  background: linear-gradient(to bottom, #37C16B, #B0FF61);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 2rem;
+  border: #0B7731 solid 4px;
+  text-shadow: 2px 2px #579929;
+}
+
+.header span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Header icon/logo */
+.header .icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #4caf50;
+  border: 3px solid white;
+  background-image: url('images/welcome.png');
+  background-size: cover;
+}
+
+/* ===========================================
+   Welcome Text
+   =========================================== */
+.welcome {
+  margin: 20px 0;
+  font-size: 1.4rem;
+  color: #0B7731;
+}
+
+/* ===========================================
+   Description Boxes
+   =========================================== */
+.description {
+  background: #c8f7a2;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #13572B;
+  margin-bottom: 20px;
+  border: #0B7731 solid 4px;
+}
+
+/* ===========================================
+   Section Titles
+   =========================================== */
+.section-title {
+  font-size: 1.3rem;
+  color: #0B7731;
+  margin-bottom: 20px;
+}
+
+/* ===========================================
+   Buttons Layout
+   =========================================== */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Button container box */
+.button-box {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+}
+
+/* Buttons */
+.button-box button {
+  width: 80%;
+  padding: 15px;
+  border-radius: 46px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.button-box button:hover {
+  transform: scale(1.05); /* Hover effect: slightly bigger */
+}
+
+/* Button Variants */
+.info-btn {
+  background: linear-gradient(to bottom, #A245C2, #DB91FF);
+  border: 5px solid #67237E;
+  text-shadow: 2px 2px #8234A8;
+}
+
+.game-btn {
+  background: linear-gradient(to bottom, #FFE57F, #FFA14E);
+  border: 5px solid #C96E1D;
+  text-shadow: 2px 2px #AE794A;
+}
+
+.credits-btn {
+  background: linear-gradient(to bottom, #80D0FF, #008BDF);
+  border: 5px solid #005E96;
+  text-shadow: 2px 2px #4066B1;
+}
+
+/* Button captions below buttons */
+.button-box p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  background: #FFEA90;
+  padding: 10px;
+  border-radius: 10px;
+  color: #6E5010;
+  border: #CCAD2A solid 4px;
+}
+
+/* ===========================================
+   Hamburger Menu Button
+   =========================================== */
+.menu-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000; /* stay on top */
+}
+
+.menu-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #37C16B, #B0FF61);
+  border: 4px solid #0B7731;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.05);
+}
+
+.menu-btn span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* ===========================================
+   Dropdown Menu
+   =========================================== */
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background: #fff;
+  border: 3px solid #AE7577;
+  border-radius: 15px;
+  min-width: 220px;
+  padding: 15px 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  z-index: 10;
+}
+
+.menu-dropdown.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Menu header circle */
+.menu-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.close-btn {
+  background: none;
+  border: 3px solid #b97a7a;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  pointer-events: none;
+}
+
+/* Horizontal line */
+hr {
+  border: none;
+  border-top: 2px dashed #e0baba;
+  margin: 10px 0;
+}
+
+/* Menu items */
+.menu-item-wrapper {
+  position: relative;
+  margin: 20px 0;
+}
+
+.menu-item-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: 65px;
+  background: #FFDADB;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.menu-item {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 46px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border: 4px solid;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+/* Menu item colors */
+.menu-item.mainmenu-btn {
+  background: linear-gradient(to bottom, #B0FF61, #37C16B);
+  border-color: #067B2C;
+  text-shadow: 2px 2px #579929;
+}
+
+.menu-item.info-btn {
+  background: linear-gradient(to bottom, #A245C2, #DB91FF);
+  border-color: #67237E;
+  text-shadow: 2px 2px #8234A8;
+}
+
+.menu-item.game-btn {
+  background: linear-gradient(to bottom, #FFE57F, #FFA14E);
+  border-color: #C96E1D;
+  text-shadow: 2px 2px #AE794A;
+}
+
+.menu-item.credits-btn {
+  background: linear-gradient(to bottom, #80D0FF, #008BDF);
+  border-color: #005E96;
+  text-shadow: 2px 2px #4066B1;
+}
+
+/* ===========================================
+   Information Page Specific Styles
+   =========================================== */
+.info-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #fffaf6;
+  border: #67237E solid 4px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* info header */
+.info-header {
+  background: linear-gradient(to bottom, #A245C2, #DB91FF);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;        
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 2rem;
+  border: #67237E solid 4px;
+  text-shadow: 2px 2px #00000066;
+  margin-bottom: 18px;
+}
+
+/* Container for the two text boxes */
+.text-box-container {
+  display: flex;            
+  gap: 20px;                
+  justify-content: center;  
+  margin: 20px 0;           
+  flex-wrap: wrap;      
+}
+
+/* ===========================================
+   Info Welcome Text
+   =========================================== */
+.info-welcome {
+  margin: 20px 0;
+  font-size: 1.4rem;
+  color: #7E2CA5;
+}
+
+/* ===========================================
+   Info Description Boxes
+   =========================================== */
+.info-description {
+  background: #EDBAFF;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #7E2CA5;
+  margin-bottom: 20px;
+  border: #7E2CA5 solid 4px;
+}
+
+
+/* Individual text boxes */
+.text-box {
+  background: #FFD885;      
+  border: 4px solid #B07E14; 
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 40%;            
+  min-width: 200px;       
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+
+/* Optional: text styling inside boxes */
+.text-box h3 {
+  color: #8A6515;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  color: #8A6515;
+  line-height: 1.5;
+}
+
+
+/* Game portal menu button (hamburger for info page) */
+.info-menu-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #A245C2, #DB91FF);
+  border: 4px solid #67237E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.info-menu-btn:hover {
+  transform: scale(1.05);
+}
+
+.info-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
+
+
+/* ===========================================
+   Game Portal Specific Styles
+   =========================================== */
+
+/* Game portal container */
+.game-portal-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #fffaf6;
+  border: #C96E1D solid 4px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Game portal header */
+.game-portal-header {
+  background: linear-gradient(to bottom, #FFA14E, #FFE57F);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;        
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 2rem;
+  border: #C96E1D solid 4px;
+  text-shadow: 2px 2px #00000066;
+  margin-bottom: 18px;
+}
+
+.game-portal-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px #EA964C;
+}
+
+/* Game description box */
+.game-portal-description {
+  background: #C2FFF7;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #0F544B;
+  margin-bottom: 30px;
+  border: #27AB99 solid 4px;
+}
+
+/* Carousel wrapper */
+.carousel-wrapper {
+  display: flex;
+  background: #FFECA1;
+  align-items: center;
+  padding: 25px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 700px;
+  position: relative;
+  border: #C96E1D solid 4px;
+  border-radius: 15px;
+}
+
+/* Carousel arrows */
+.carousel-arrow {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #C96E1D;
+  transition: transform 0.2s;
+  z-index: 2;
+}
+.carousel-arrow:hover {
+  transform: scale(1.2);
+}
+
+/* Carousel track */
+.carousel {
+  overflow: hidden;
+  width: 500px;
+  padding: 15px 0;
+}
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+/* Individual carousel items */
+.carousel-item {
+  flex: 0 0 150px;
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item.active {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+/* Game description box */
+.game-description {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background: linear-gradient(to bottom, #FFE57F, #FFA14E);
+  border: #C96E1D solid 4px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1rem;
+  color: #7E430F;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+/* Game portal menu button (hamburger for portal page) */
+.game-portal-menu-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #FFA14E, #FFE57F);
+  border: 4px solid #C96E1D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.game-portal-menu-btn:hover {
+  transform: scale(1.05);
+}
+
+.game-portal-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* ===========================================
+   Credits Page Specific Styles
+   =========================================== */
+   
+/* Credits container */
+.credits-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #fffaf6;
+  border: #005E96 solid 4px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Credits header */
+.credits-header {
+  background: linear-gradient(to bottom, #008BDF, #80D0FF);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;        
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 2rem;
+  border: #005E96 solid 4px;
+  text-shadow: 2px 2px #00000066;
+  margin-bottom: 18px;
+}
+
+/* Credits menu button (hamburger for credits page) */
+.credits-menu-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #008BDF, #80D0FF);
+  border: 4px solid #005E96;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.credits-menu-btn:hover {
+  transform: scale(1.05);
+}
+
+.credits-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
