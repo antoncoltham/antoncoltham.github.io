@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" id="credits">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Papa's Games - Game Portal</title>
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body class="credits-page">
+   <!-- Menu Button + Dropdown -->
+  <div class="menu-container">
+    <!-- Hamburger button -->
+    <div class="credits-menu-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div id="menu" class="menu-dropdown">
+      <div class="menu-header">
+        <div class="close-btn"></div>
+      </div>
+      <hr>
+      <div class="menu-item-wrapper">
+        <a href="index.html" class="menu-item mainmenu-btn">Main Menu</a>
+      </div>
+      <div class="menu-item-wrapper">
+        <a href="info.html" class="menu-item info-btn">Information</a>
+      </div>
+      <div class="menu-item-wrapper">
+        <a href="gameportal.html" class="menu-item game-btn">Game Portal</a>
+      </div>
+      <div class="menu-item-wrapper">
+        <a href="credits.html" class="menu-item credits-btn">Credits</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="credits-container">
+    <div class="credits-header">
+      <p>Credits</p>
+    </div>
+
+    <div class="credits-welcome">Special thanks to:</div>
+	
+    <!-- ===== Two Text Boxes Side by Side ===== -->
+    <div class="credits-text-box-container">
+      <div class="credits-text-box">
+        <h3>Images</h3>
+		<p>• Poki.com for all game icon images</p>
+		<p>• The offical Papa's Games for all background images</p>
+		<p>• papasgamesfree.io for the 'Welcome' image</p>
+      </div>
+
+      <div class="credits-text-box">
+        <h3>Information</h3>
+        <p>• The Flipline Studios Wiki, for all offical text</p>
+		<p>• Chat.gpt, for making descriptions (that have been proofread)</p>
+      </div>
+    </div>
+	<div class="credits-welcome">And Flipline Studios for making the franchise!</div>
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
