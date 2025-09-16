@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Ensures proper scaling and rendering on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Papa's Games</title>
+  <!-- External stylesheet for page layout and styling -->
+  <link rel="stylesheet" href="layout.css">
+  <!-- Describes the page content for search engines -->
+  <meta name="description" content="A brief overview of the Papa's Games franchise">
+
+  <!-- Helps search engines match keywords with this page -->
+  <meta name="keywords" content="papa's games">
+</head>
+<body>
+  <!-- ===============================
+       MENU BUTTON + DROPDOWN MENU
+       =============================== -->
+  <div class="menu-container">
+    <!-- Hamburger button (3 stacked lines) -->
+    <div class="menu-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Dropdown Menu (hidden by default, toggled via JS) -->
+    <div id="menu" class="menu-dropdown">
+      <div class="menu-header">
+        <!-- Close button (styled in CSS) -->
+        <div class="close-btn"></div>
+      </div>
+      <hr>
+      <!-- Navigation links -->
+      <div class="menu-item-wrapper">
+        <a href="index.html" class="menu-item mainmenu-btn">Main Menu</a>
+      </div>
+      <div class="menu-item-wrapper">
+        <a href="info.html" class="menu-item info-btn">Information</a>
+      </div>
+      <div class="menu-item-wrapper">
+        <a href="gameportal.html" class="menu-item game-btn">Game Portal</a>
+      </div>
+      <div class="menu-item-wrapper">
+        <a href="credits.html" class="menu-item credits-btn">Credits</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===============================
+       MAIN CONTENT
+       =============================== -->
+  <div class="container">
+    <!-- Page Header -->
+    <div class="header">
+      <div class="logo">
+        <p>Papa's Games</p>
+      </div>
+      <!-- Placeholder for an icon (styled in CSS) -->
+      <div class="icon"></div>
+    </div>
+
+    <!-- Welcome Message -->
+    <div class="welcome">Welcome to the Papa's Games website!</div>
+
+    <!-- Short description of the website purpose -->
+    <div class="description">
+      This website serves the purpose of providing information about the Papa's Games franchise, 
+      along with having a built-in game portal where you can go directly to the games themselves!
+    </div>
+
+    <!-- Section Title -->
+    <div class="section-title">The pages on this website</div>
+
+    <!-- ===============================
+         NAVIGATION BUTTONS TO PAGES
+         =============================== -->
+    <div class="buttons">
+      <!-- Info Page Button -->
+      <div class="button-box">
+        <a href="info.html"><button class="info-btn">Information</button></a>
+        <p>On this page, you'll learn about some of the history and how far this franchise has come.</p>
+      </div>
+
+      <!-- Game Portal Button -->
+      <div class="button-box">
+        <a href="gameportal.html"><button class="game-btn">Game Portal</button></a>
+        <p>This page is host to the Game Portal, a carousel style menu where you can play your favorite games.</p>
+      </div>
+
+      <!-- Credits Page Button -->
+      <div class="button-box">
+        <a href="credits.html"><button class="credits-btn">Credits</button></a>
+        <p>All of the assets and sources of information are credited on this page.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===============================
+       JAVASCRIPT
+       =============================== -->
+  <script>
+    // Function to toggle dropdown menu visibility
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("show"); // Adds/removes "show" class
+    }
+  </script>
+</body>
+</html>

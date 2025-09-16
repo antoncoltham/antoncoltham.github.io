@@ -4,24 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Papa's Games - Game Portal</title>
-  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="layout.css"> <!-- Link to external stylesheet -->
+  <!-- Describes the page content for search engines -->
+  <meta name="description" content="A brief overview of the Papa's Games franchise">
+
+  <!-- Helps search engines match keywords with this page -->
 </head>
 <body class="credits-page">
-   <!-- Menu Button + Dropdown -->
+   <!-- =========================
+        Menu Button + Dropdown
+   ========================== -->
   <div class="menu-container">
-    <!-- Hamburger button -->
+    <!-- Hamburger menu button (specific to credits page for styling) -->
     <div class="credits-menu-btn" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- Dropdown Menu -->
+    <!-- Dropdown Menu (hidden until toggled) -->
     <div id="menu" class="menu-dropdown">
       <div class="menu-header">
-        <div class="close-btn"></div>
+        <div class="close-btn"></div> <!-- Optional close button -->
       </div>
       <hr>
+      <!-- Navigation links -->
       <div class="menu-item-wrapper">
         <a href="index.html" class="menu-item mainmenu-btn">Main Menu</a>
       </div>
@@ -37,31 +44,45 @@
     </div>
   </div>
 
-  <!-- Main Content -->
+  <!-- =========================
+       Main Content Section
+  ========================== -->
   <div class="credits-container">
+    <!-- Page Header -->
     <div class="credits-header">
       <p>Credits</p>
     </div>
 
+    <!-- Intro text -->
     <div class="credits-welcome">Special thanks to:</div>
 	
     <!-- ===== Two Text Boxes Side by Side ===== -->
     <div class="credits-text-box-container">
+      <!-- Left box: Images sources -->
       <div class="credits-text-box">
         <h3>Images</h3>
-		<p>• Poki.com for all game icon images</p>
-		<p>• The offical Papa's Games for all background images</p>
-		<p>• papasgamesfree.io for the 'Welcome' image</p>
+        <p>• Poki.com for all game icon images</p>
+        <p>• The official Papa's Games for all background images</p>
+        <p>• papasgamesfree.io for the 'Welcome' image</p>
       </div>
 
+      <!-- Right box: Information sources -->
       <div class="credits-text-box">
         <h3>Information</h3>
-        <p>• The Flipline Studios Wiki, for all offical text</p>
-		<p>• Chat.gpt, for making descriptions (that have been proofread)</p>
+        <p>• The Flipline Studios Wiki, for all official text</p>
+        <p>• ChatGPT, for making descriptions (that have been proofread)</p>
       </div>
     </div>
-	<div class="credits-welcome">And Flipline Studios for making the franchise!</div>
+
+    <!-- Closing statement -->
+    <div class="credits-welcome">And Flipline Studios for making the franchise!</div>
+  </div>
+
+  <!-- =========================
+       JavaScript Section
+  ========================== -->
   <script>
+    // Toggle dropdown menu visibility
     function toggleMenu() {
       document.getElementById("menu").classList.toggle("show");
     }

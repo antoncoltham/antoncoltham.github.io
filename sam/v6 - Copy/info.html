@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" id="info">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Papa's Games - Information</title>
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body class="info-page">
+  <!-- Menu Button + Dropdown -->
+  <div class="menu-container">
+    <!-- Hamburger button -->
+    <div class="info-menu-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div id="menu" class="menu-dropdown">
+      <div class="menu-header">
+        <div class="close-btn"></div>
+      </div>
+      <hr>
+      <div class="menu-item-wrapper">
+        <a href="index.html" class="menu-item mainmenu-btn">Main Menu</a>
+      </div>
+      <div class="menu-item-wrapper">
+        <a href="info.html" class="menu-item info-btn">Information</a>
+      </div>
+      <div class="menu-item-wrapper">
+        <a href="gameportal.html" class="menu-item game-btn">Game Portal</a>
+      </div>
+      <div class="menu-item-wrapper">
+        <a href="credits.html" class="menu-item credits-btn">Credits</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="info-container">
+    <div class="info-header">
+      <p>Information</p>
+    </div>
+
+    <div class="info-welcome">Learn About Papa's Games!</div>
+    <div class="info-description">
+      The collection of Papa's Games are a beloved franchise of online simulation and restaurant management games created by Flipline Studios. 
+      Players can run restaurants, bake desserts, and serve customers while exploring fun gameplay mechanics. 
+      Each game offers a unique theme and challenges that test your multitasking and management skills.
+    </div>
+
+    <!-- ===== Two Text Boxes Side by Side ===== -->
+    <div class="text-box-container">
+      <div class="text-box">
+        <h3>History</h3>
+		<p>Flipline Studios - the founding company -  is an American game development company founded in 2004 that is best known for its series of Papa Louie restaurant time-management games.<br>It was founded by Matt Neff and Tony Solary.</p>
+      </div>
+
+      <div class="text-box">
+        <h3>Gameplay</h3>
+        <p>There are currently 14 games in the papa's web series, alongside 3 Papa Louie side games.<br>The oldest of the franchise being Papa's Pizzeria, and the newest being Papa's Scooperia, which was released in 2018. </p>
+      </div>
+    </div>
+	<div class="info-welcome">A Brief History</div>
+	<div class="info-description">
+      During 2002-2003, before Flipline IDS was founded, Neff and Solary worked together on a Sidescrolling/RPG game called The Mawglin. In 2004, Neff and Solary formed Flipline IDS.
+	  <br><br>Their first product was a comic called Freezing Pointe. Freezing Pointe was discontinued in 2006 when the company began their focus on creating Flash games. Flipline IDS was renamed to Flipline Studios.
+	  <br><br>Papa Louie: When Pizzas Attack! was released in the same year. On August 7, 2007, Flipline Studios unveiled their website and released their first Gameria, Papa's Pizzeria. 
+    </div>
+	
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

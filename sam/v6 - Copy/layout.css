@@ -1,0 +1,697 @@
+/* ===========================================
+   📖 CSS LEGEND / TABLE OF CONTENTS
+   ===========================================
+   1. Google Font Import
+   2. General Reset
+   3. HTML Backgrounds (per page)
+   4. Body Layout
+   5. Shared Container Styles
+   6. Headers (colored top bars)
+   7. Welcome Text (page intro messages)
+   8. Section Titles
+   9. Description Boxes
+   10. Buttons Section (main menu)
+   11. Hamburger Menu Button
+   12. Dropdown Menu
+   13. Info Page Styles
+   14. Game Portal Styles
+   15. Credits Page Styles
+   =========================================== */
+
+
+/* ===========================================
+   1. Google Font Import
+   - Loads "Dela Gothic One" from Google Fonts
+   =========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+
+/* ===========================================
+   2. General Reset
+   - Removes default browser padding/margins
+   - Applies consistent box sizing
+   - Sets global font
+   =========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Dela Gothic One', sans-serif;
+}
+
+
+/* ===========================================
+   3. HTML Backgrounds
+   - Page-specific background images
+   =========================================== */
+html {
+  background-image: url('images/bg.png'); /* Default */
+  background-size: cover;
+}
+html#info {
+  background-image: url('images/bg2.png'); /* Info page */
+}
+html#game {
+  background-image: url('images/bg3.png'); /* Game portal */
+}
+html#credits {
+  background-image: url('images/bg4.png'); /* Credits page */
+}
+
+
+/* ===========================================
+   4. Body Layout
+   - Centers content
+   - Restrains width
+   =========================================== */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 900px;
+  margin: auto;
+}
+
+
+/* ===========================================
+   5. Shared Container Styles
+   - White rounded box holding page content
+   =========================================== */
+.container {
+  background: white;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  border: #0B7731 solid 4px;
+}
+
+
+/* ===========================================
+   6. Headers (colored top bars)
+   - Used on homepage + per-page headers
+   =========================================== */
+.header {
+  background: linear-gradient(to bottom, #37C16B, #B0FF61);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 2rem;
+  border: #0B7731 solid 4px;
+  text-shadow: 2px 2px #579929;
+}
+.header span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header .icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #4caf50;
+  border: 3px solid white;
+  background-image: url('images/welcome.png');
+  background-size: cover;
+}
+
+
+/* ===========================================
+   7. Welcome Text
+   - Intro messages below headers
+   =========================================== */
+.welcome {
+  margin: 20px 0;
+  font-size: 1.4rem;
+  color: #0B7731;
+}
+
+
+/* ===========================================
+   8. Section Titles
+   - Titles above grouped content
+   =========================================== */
+.section-title {
+  font-size: 1.3rem;
+  color: #0B7731;
+  margin-bottom: 20px;
+}
+
+
+/* ===========================================
+   9. Description Boxes
+   - Colored background info sections
+   =========================================== */
+.description {
+  background: #c8f7a2;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #13572B;
+  margin-bottom: 20px;
+  border: #0B7731 solid 4px;
+}
+
+
+/* ===========================================
+   10. Buttons Section (main menu)
+   - Large gradient buttons w/ captions
+   =========================================== */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.button-box {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+}
+.button-box a {
+  width: 80%;
+  padding: 15px;
+  border-radius: 46px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+.button-box a:hover {
+  transform: scale(1.05);
+}
+/* Button variants */
+.info-btn {
+  background: linear-gradient(to bottom, #A245C2, #DB91FF);
+  border: 5px solid #67237E;
+  text-shadow: 2px 2px #8234A8;
+}
+.game-btn {
+  background: linear-gradient(to bottom, #FFA14E, #FFE57F);
+  border: 5px solid #C96E1D;
+  text-shadow: 2px 2px #AE794A;
+}
+.credits-btn {
+  background: linear-gradient(to bottom, #008BDF, #80D0FF);
+  border: 5px solid #005E96;
+  text-shadow: 2px 2px #4066B1;
+}
+/* Captions under buttons */
+.button-box p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  background: #FFEA90;
+  padding: 10px;
+  border-radius: 10px;
+  color: #6E5010;
+  border: #CCAD2A solid 4px;
+}
+
+
+/* ===========================================
+   11. Hamburger Menu Button
+   - Circular green button with 3 bars
+   =========================================== */
+.menu-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+.menu-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #37C16B, #B0FF61);
+  border: 4px solid #0B7731;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.menu-btn:hover { transform: scale(1.05); }
+.menu-btn span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
+
+
+/* ===========================================
+   12. Dropdown Menu
+   - Expands when hamburger clicked
+   =========================================== */
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background: #fff;
+  border: 3px solid #AE7577;
+  border-radius: 15px;
+  min-width: 220px;
+  padding: 15px 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  z-index: 10;
+}
+.menu-dropdown.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* Decorative menu styles */
+.menu-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.close-btn {
+  background: none;
+  border: 3px solid #b97a7a;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  pointer-events: none;
+}
+hr {
+  border: none;
+  border-top: 2px dashed #e0baba;
+  margin: 10px 0;
+}
+/* Menu items */
+.menu-item-wrapper {
+  position: relative;
+  margin: 20px 0;
+}
+.menu-item-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: 65px;
+  background: #FFDADB;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+.menu-item {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 46px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border: 4px solid;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+.menu-item:hover { transform: scale(1.05); }
+/* Color variants for dropdown */
+.menu-item.mainmenu-btn {
+  background: linear-gradient(to bottom, #B0FF61, #37C16B);
+  border-color: #067B2C;
+  text-shadow: 2px 2px #579929;
+}
+.menu-item.info-btn {
+  background: linear-gradient(to bottom, #A245C2, #DB91FF);
+  border-color: #67237E;
+  text-shadow: 2px 2px #8234A8;
+}
+.menu-item.game-btn {
+  background: linear-gradient(to bottom, #FFA14E, #FFE57F);
+  border-color: #C96E1D;
+  text-shadow: 2px 2px #AE794A;
+}
+.menu-item.credits-btn {
+  background: linear-gradient(to bottom, #008BDF, #80D0FF);
+  border-color: #005E96;
+  text-shadow: 2px 2px #4066B1;
+}
+
+/* ===========================================
+   13. Info Page Styles
+   - Unique look for the Information page
+   =========================================== */
+
+/* Main container */
+.info-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #fffaf6;
+  border: #67237E solid 4px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Header bar */
+.info-header {
+  background: linear-gradient(to bottom, #A245C2, #DB91FF);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;        
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 2rem;
+  border: #67237E solid 4px;
+  text-shadow: 2px 2px #00000066;
+  margin-bottom: 18px;
+}
+
+/* Welcome text */
+.info-welcome {
+  margin: 20px 0;
+  font-size: 1.4rem;
+  color: #7E2CA5;
+}
+
+/* Description box */
+.info-description {
+  background: #EDBAFF;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #7E2CA5;
+  margin-bottom: 20px;
+  border: #7E2CA5 solid 4px;
+}
+
+/* Two-column text box layout */
+.text-box-container {
+  display: flex;            
+  gap: 20px;                
+  justify-content: center;  
+  margin: 20px 0;           
+  flex-wrap: wrap;      
+}
+
+/* Individual text box */
+.text-box {
+  background: #FFD885;      
+  border: 4px solid #B07E14; 
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 40%;            
+  min-width: 200px;       
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+.text-box h3 {
+  color: #8A6515;
+  margin-bottom: 10px;
+}
+.text-box p {
+  color: #8A6515;
+  line-height: 1.5;
+}
+
+/* Info page hamburger button */
+.info-menu-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #A245C2, #DB91FF);
+  border: 4px solid #67237E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.info-menu-btn:hover { transform: scale(1.05); }
+.info-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
+
+
+/* ===========================================
+   14. Game Portal Styles
+   - Unique look for the Game Portal page
+   =========================================== */
+
+/* Main container */
+.game-portal-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #fffaf6;
+  border: #C96E1D solid 4px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Header bar */
+.game-portal-header {
+  background: linear-gradient(to bottom, #FFA14E, #FFE57F);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;        
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 2rem;
+  border: #C96E1D solid 4px;
+  text-shadow: 2px 2px #00000066;
+  margin-bottom: 18px;
+}
+
+/* Title under header */
+.game-portal-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px #EA964C;
+}
+
+/* Intro description */
+.game-portal-description {
+  background: #C2FFF7;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #0F544B;
+  margin-bottom: 30px;
+  border: #27AB99 solid 4px;
+}
+
+/* Carousel wrapper */
+.carousel-wrapper {
+  display: flex;
+  background: #FFECA1;
+  align-items: center;
+  padding: 25px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 700px;
+  position: relative;
+  border: #C96E1D solid 4px;
+  border-radius: 15px;
+}
+
+/* Arrows */
+.carousel-arrow {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #C96E1D;
+  transition: transform 0.2s;
+  z-index: 2;
+}
+.carousel-arrow:hover { transform: scale(1.2); }
+
+/* Carousel track */
+.carousel {
+  overflow: hidden;
+  width: 500px;
+  padding: 15px 0;
+}
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+/* Carousel items */
+.carousel-item {
+  flex: 0 0 150px;
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.carousel-item.active {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+/* Game description under carousel */
+.game-description {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background: linear-gradient(to bottom, #FFE57F, #FFA14E);
+  border: #C96E1D solid 4px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1rem;
+  color: #7E430F;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+/* Game portal hamburger button */
+.game-portal-menu-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #FFA14E, #FFE57F);
+  border: 4px solid #C96E1D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.game-portal-menu-btn:hover { transform: scale(1.05); }
+.game-portal-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
+
+
+/* ===========================================
+   15. Credits Page Styles
+   - Unique look for the Credits page
+   =========================================== */
+
+/* Main container */
+.credits-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #fffaf6;
+  border: #005E96 solid 4px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Header bar */
+.credits-header {
+  background: linear-gradient(to bottom, #008BDF, #80D0FF);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;        
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 2rem;
+  border: #005E96 solid 4px;
+  text-shadow: 2px 2px #00000066;
+  margin-bottom: 18px;
+}
+
+/* Welcome text */
+.credits-welcome {
+  margin: 20px 0;
+  font-size: 1.4rem;
+  color: #006EB1;
+}
+
+/* Text box layout */
+.credits-text-box-container {
+  display: flex;            
+  gap: 20px;                
+  justify-content: center;  
+  margin: 20px 0;           
+  flex-wrap: wrap;      
+}
+
+/* Individual text box */
+.credits-text-box {
+  background: #CCECFF;      
+  border: 4px solid #005E96; 
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 40%;            
+  min-width: 200px;       
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+.credits-text-box h3 {
+  color: #006EB1;
+  margin-bottom: 10px;
+}
+.credits-text-box p {
+  color: #006EB1;
+  line-height: 1.5;
+}
+
+/* Credits hamburger button */
+.credits-menu-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #008BDF, #80D0FF);
+  border: 4px solid #005E96;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.credits-menu-btn:hover { transform: scale(1.05); }
+.credits-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}

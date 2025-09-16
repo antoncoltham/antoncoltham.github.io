@@ -2,26 +2,37 @@
 <html lang="en" id="info">
 <head>
   <meta charset="UTF-8">
+  <!-- Makes the page scale properly on all devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Papa's Games - Information</title>
+  <!-- External CSS file for layout and styling -->
   <link rel="stylesheet" href="layout.css">
+  <!-- Describes the page content for search engines -->
+  <meta name="description" content="A brief overview of the Papa's Games franchise">
+
+  <!-- Helps search engines match keywords with this page -->
 </head>
+<!-- "info-page" body class allows page-specific styling -->
 <body class="info-page">
-  <!-- Menu Button + Dropdown -->
+  <!-- ===============================
+       MENU BUTTON + DROPDOWN MENU
+       =============================== -->
   <div class="menu-container">
-    <!-- Hamburger button -->
+    <!-- Hamburger button (3 stacked bars) -->
     <div class="info-menu-btn" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- Dropdown Menu -->
+    <!-- Dropdown Menu (hidden by default, toggled via JS) -->
     <div id="menu" class="menu-dropdown">
       <div class="menu-header">
+        <!-- Close button (styled in CSS) -->
         <div class="close-btn"></div>
       </div>
       <hr>
+      <!-- Navigation links to other pages -->
       <div class="menu-item-wrapper">
         <a href="index.html" class="menu-item mainmenu-btn">Main Menu</a>
       </div>
@@ -37,13 +48,19 @@
     </div>
   </div>
 
-  <!-- Main Content -->
+  <!-- ===============================
+       MAIN CONTENT
+       =============================== -->
   <div class="info-container">
+    <!-- Page Header -->
     <div class="info-header">
       <p>Information</p>
     </div>
 
+    <!-- Welcome Section -->
     <div class="info-welcome">Learn About Papa's Games!</div>
+
+    <!-- Description of the franchise -->
     <div class="info-description">
       The collection of Papa's Games are a beloved franchise of online simulation and restaurant management games created by Flipline Studios. 
       Players can run restaurants, bake desserts, and serve customers while exploring fun gameplay mechanics. 
@@ -52,26 +69,45 @@
 
     <!-- ===== Two Text Boxes Side by Side ===== -->
     <div class="text-box-container">
+      <!-- First Text Box: History -->
       <div class="text-box">
         <h3>History</h3>
-		<p>Flipline Studios - the founding company -  is an American game development company founded in 2004 that is best known for its series of Papa Louie restaurant time-management games.<br>It was founded by Matt Neff and Tony Solary.</p>
+        <p>
+          Flipline Studios - the founding company - is an American game development company founded in 2004 
+          that is best known for its series of Papa Louie restaurant time-management games.<br>
+          It was founded by Matt Neff and Tony Solary.
+        </p>
       </div>
 
+      <!-- Second Text Box: Gameplay -->
       <div class="text-box">
         <h3>Gameplay</h3>
-        <p>There are currently 14 games in the papa's web series, alongside 3 Papa Louie side games.<br>The oldest of the franchise being Papa's Pizzeria, and the newest being Papa's Scooperia, which was released in 2018. </p>
+        <p>
+          There are currently 14 games in the Papa's web series, alongside 3 Papa Louie side games.<br>
+          The oldest of the franchise being Papa's Pizzeria, and the newest being Papa's Scooperia, which was released in 2018. 
+        </p>
       </div>
     </div>
-	<div class="info-welcome">A Brief History</div>
-	<div class="info-description">
-      During 2002-2003, before Flipline IDS was founded, Neff and Solary worked together on a Sidescrolling/RPG game called The Mawglin. In 2004, Neff and Solary formed Flipline IDS.
-	  <br><br>Their first product was a comic called Freezing Pointe. Freezing Pointe was discontinued in 2006 when the company began their focus on creating Flash games. Flipline IDS was renamed to Flipline Studios.
-	  <br><br>Papa Louie: When Pizzas Attack! was released in the same year. On August 7, 2007, Flipline Studios unveiled their website and released their first Gameria, Papa's Pizzeria. 
+
+    <!-- Extended History Section -->
+    <div class="info-welcome">A Brief History</div>
+    <div class="info-description">
+      During 2002-2003, before Flipline IDS was founded, Neff and Solary worked together on a Sidescrolling/RPG game called <i>The Mawglin</i>. 
+      In 2004, Neff and Solary formed Flipline IDS.
+      <br><br>
+      Their first product was a comic called <i>Freezing Pointe</i>. Freezing Pointe was discontinued in 2006 when the company 
+      began their focus on creating Flash games. Flipline IDS was renamed to Flipline Studios.
+      <br><br>
+      <i>Papa Louie: When Pizzas Attack!</i> was released in the same year. On August 7, 2007, Flipline Studios unveiled their 
+      website and released their first Gameria, <i>Papa's Pizzeria</i>. 
     </div>
-	
   </div>
 
+  <!-- ===============================
+       JAVASCRIPT
+       =============================== -->
   <script>
+    // Function to toggle the dropdown menu
     function toggleMenu() {
       document.getElementById("menu").classList.toggle("show");
     }

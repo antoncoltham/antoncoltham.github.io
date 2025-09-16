@@ -2,26 +2,37 @@
 <html lang="en" id="game">
 <head>
   <meta charset="UTF-8">
+  <!-- Makes the page responsive on all devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Papa's Games - Game Portal</title>
+  <!-- External CSS file for styles -->
   <link rel="stylesheet" href="layout.css">
+  <!-- Describes the page content for search engines -->
+  <meta name="description" content="A brief overview of the Papa's Games franchise">
+
+  <!-- Helps search engines match keywords with this page -->
 </head>
+<!-- Page body uses a specific class for portal styling -->
 <body class="game-portal-page">
-   <!-- Menu Button + Dropdown -->
+   <!-- ===============================
+        MENU BUTTON + DROPDOWN MENU
+        =============================== -->
   <div class="menu-container">
-    <!-- Hamburger button -->
+    <!-- Hamburger button (3 bars) -->
     <div class="game-portal-menu-btn" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- Dropdown Menu -->
+    <!-- Dropdown Menu (hidden by default, toggled via JS) -->
     <div id="menu" class="menu-dropdown">
       <div class="menu-header">
+        <!-- Close button (visual only, functionality handled in CSS/JS) -->
         <div class="close-btn"></div>
       </div>
       <hr>
+      <!-- Navigation Links -->
       <div class="menu-item-wrapper">
         <a href="index.html" class="menu-item mainmenu-btn">Main Menu</a>
       </div>
@@ -37,28 +48,43 @@
     </div>
   </div>
 
-  <!-- Game Portal Section -->
+  <!-- ===============================
+       GAME PORTAL CONTENT
+       =============================== -->
   <div class="game-portal-container">
+    <!-- Page Header -->
     <div class="game-portal-header">
       <p>Game Portal</p>
     </div>
+
+    <!-- Short description -->
     <div class="game-portal-description">
-      Welcome to the game portal! Here you can see all the current papa's games that you can play online for free. You can cycle through the games with the arrows, and the option to play the game yourself can be accessed by clicking on the game.
+      Welcome to the game portal! Here you can see all the current Papa's Games that you can play online for free. 
+      You can cycle through the games with the arrows, and the option to play the game yourself can be accessed by clicking on the game.
     </div>
 
-    <!-- Carousel -->
+    <!-- ===== Carousel Section ===== -->
     <div class="carousel-wrapper">
+      <!-- Left Arrow -->
       <button class="carousel-arrow left" onclick="prevGame()">&#9664;</button>
+
+      <!-- Carousel container -->
       <div class="carousel">
+        <!-- Track that holds all the game items -->
         <div class="carousel-track" id="carousel-track"></div>
       </div>
+
+      <!-- Right Arrow -->
       <button class="carousel-arrow right" onclick="nextGame()">&#9654;</button>
     </div>
 
-    <!-- Game Description -->
+    <!-- Game description updates dynamically when user scrolls -->
     <div id="game-description" class="game-description"></div>
   </div>
 
+  <!-- ===============================
+       JAVASCRIPT
+       =============================== -->
   <script>
     // ===== MENU TOGGLE =====
     function toggleMenu() {
@@ -66,6 +92,7 @@
     }
 
     // ===== GAME DATA =====
+    // Array of all Papa's Games with title, description, image, and URL
     const games = [
       { title: "Papa's Donuteria", 
         desc: "Papa's Donuteria is a sweet donut shop adventure.<br><em>\"Roller Coasters speed overhead as you embark on a donut-cooking adventure!\"</em>", 
@@ -138,25 +165,26 @@
         url: "https://www.coolmathgames.com/0-papas-taco-mia" }
     ];
 
+    // Grab carousel track and description box elements
     const track = document.getElementById("carousel-track");
     const descriptionBox = document.getElementById("game-description");
 
     // ===== BUILD CAROUSEL =====
     function buildCarousel() {
-      track.innerHTML = "";
+      track.innerHTML = ""; // Clear existing items
       games.forEach(game => {
         const item = document.createElement("div");
         item.className = "carousel-item";
 
         if (game.url) {
-          // Wrap image in <a> if URL exists
+          // If the game has a playable link, wrap its image in <a>
           item.innerHTML = `
             <a href="${game.url}" target="_blank">
               <img src="${game.img}" alt="${game.title}">
             </a>
           `;
         } else {
-          // Just image if no URL
+          // Otherwise just show the image
           item.innerHTML = `<img src="${game.img}" alt="${game.title}">`;
         }
 
@@ -164,31 +192,37 @@
       });
     }
 
-    let currentIndex = Math.floor(games.length / 2); // start in the middle
+    // Start carousel at the middle game
+    let currentIndex = Math.floor(games.length / 2);
 
+    // Update carousel visuals and description
     function updateCarousel() {
       const items = document.querySelectorAll(".carousel-item");
-      items.forEach(item => item.classList.remove("active"));
-      items[currentIndex].classList.add("active");
+      items.forEach(item => item.classList.remove("active")); // reset
+      items[currentIndex].classList.add("active"); // highlight current
 
+      // Calculate offset to center active item in viewport
       const offset = -(currentIndex * 170 - (500 / 2 - 75));
       track.style.transition = "transform 0.5s ease";
       track.style.transform = `translateX(${offset}px)`;
 
+      // Update game description box
       descriptionBox.innerHTML = games[currentIndex].desc;
     }
 
+    // Navigate to previous game
     function prevGame() {
       currentIndex = (currentIndex - 1 + games.length) % games.length;
       updateCarousel();
     }
 
+    // Navigate to next game
     function nextGame() {
       currentIndex = (currentIndex + 1) % games.length;
       updateCarousel();
     }
 
-    // init
+    // ===== INITIALIZE CAROUSEL =====
     buildCarousel();
     updateCarousel();
   </script>
