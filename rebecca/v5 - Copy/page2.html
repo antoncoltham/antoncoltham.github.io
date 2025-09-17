@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="layout.css">
+  <title>Page 2 - Severance Cast</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <div class="characters">
+    <!-- Replace the src values with your actual image paths -->
+    <div class="character">
+      <img src="images/irving-removebg-preview.png" alt="Irving" />
+    </div>
+    <div class="character">
+      <img src="images/helena-removebg-preview.png" alt="Helly" />
+    </div>
+    <div class="character">
+      <img src="images/dylanO.png" alt="Dylan" />
+    </div>
+    <div class="character">
+      <img src="images/outie_mark-removebg-preview.png" alt="Mark" />
+    </div>
+    <div class="character">
+      <img src="images/Seth_Milchick_Severance-removebg-preview.png" alt="Milchick" />
+    </div>
+  </div>
+
+  <button id="leftButton" class="arrow-btn">←</button>
+  <button id="rightButton" class="arrow-btn">→</button>
+
+  <script>
+    const pages = ['index.html', 'page2.html', 'page3.html', 'page4.html', 'page5.html'];
+    const currentPage = window.location.pathname.split("/").pop() || 'index.html';
+
+    function navigate(offset) {
+      const currentIndex = pages.indexOf(currentPage);
+      if (currentIndex === -1) return;
+      let newIndex = (currentIndex + offset + pages.length) % pages.length;
+      window.location.href = pages[newIndex];
+    }
+
+    document.getElementById('leftButton').addEventListener('click', () => navigate(-1));
+    document.getElementById('rightButton').addEventListener('click', () => navigate(1));
+  </script>
+
+</body>
+</html>

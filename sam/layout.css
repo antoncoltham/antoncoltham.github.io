@@ -410,8 +410,8 @@ hr {
 
 /* Individual text box */
 .text-box {
-  background: #FFD885;      
-  border: 4px solid #B07E14; 
+  background: #FFEA90;      
+  border: 4px solid #CCAD2A; 
   border-radius: 10px;
   padding: 20px;
   flex: 1 1 40%;            
@@ -420,11 +420,11 @@ hr {
   font-size: 0.9rem;
 }
 .text-box h3 {
-  color: #8A6515;
+  color: #6E5010;
   margin-bottom: 10px;
 }
 .text-box p {
-  color: #8A6515;
+  color: #6E5010;
   line-height: 1.5;
 }
 
@@ -655,7 +655,7 @@ hr {
 /* Individual text box */
 .credits-text-box {
   background: #CCECFF;      
-  border: 4px solid #005E96; 
+  border: 4px solid #0C4A6F; 
   border-radius: 10px;
   padding: 20px;
   flex: 1 1 40%;            
@@ -664,11 +664,11 @@ hr {
   font-size: 0.9rem;
 }
 .credits-text-box h3 {
-  color: #006EB1;
+  color: #0C4A6F;
   margin-bottom: 10px;
 }
 .credits-text-box p {
-  color: #006EB1;
+  color: #0C4A6F;
   line-height: 1.5;
 }
 
