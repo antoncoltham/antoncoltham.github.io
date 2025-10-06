@@ -5,14 +5,10 @@ html{
 body {
   font-family: Arial, sans-serif;
   margin: 50px;
-  /*padding: 100px;*/
-  /*height: 100vh;*/
   width: 700px;
-  /*height: 150px;*/
   margin: auto;
-  /*position: relative;
-  overflow: hidden;*/
 }
+
 
 .masked-text {
     font-size: 30px;
@@ -37,10 +33,6 @@ body {
 }
 
 
-h1 {
-	font-family: bradley hand, cursive;
-	color: orange;
-} 
 	
 #index section {
 	background-image: url("images/river_croc_1.png");
@@ -86,8 +78,9 @@ h1 {
   left: 20px;
   cursor: pointer;
   z-index: 2;
-  color: white;
+  color: Orange;
 }
+
 
 
 /* Capybara Characters */
@@ -96,6 +89,10 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.dancing img {
+	width: 850px;
 }
 
 .capybara img {
@@ -124,6 +121,16 @@ top: 180px;
 .friends {
   left: 0px;
   bottom: 50px;
+}
+
+.fax img {
+	width: 300px;
+}
+
+.fax {
+position: relative;
+left: 50px;
+top: 100px;
 }
 
 /* Speech Bubbles */
@@ -186,6 +193,7 @@ top: 180px;
   left: 350px;
   top: 70px;
   width: 200px;
+  height: 160px
 }
 
 #habitats .speech.left {
@@ -218,7 +226,7 @@ top: 180px;
 
 #anatomy .speech.right {
   left: 560px;
-  top: 160px;
+  top: 1px;
   width: 200px;
 }
 
@@ -279,6 +287,14 @@ top: 180px;
   border-top-color: red;
 }
 
+#index .speech.right::before {
+  content: '';
+  position: absolute;
+  right: 25px;
+  top: 185px;
+  border: 10px solid transparent;
+  border-top-color: red;
+}
 
 #habitats .speech.right::before {
   content: '';
@@ -350,11 +366,20 @@ top: 180px;
 }
 
 .bara-button {
-    right: 1110px;
-    top: 50%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
+  background: none;        
+  border: none;            
+  padding: 0;              
+  cursor: pointer;   
+  position: absolute;
+  top: 370px;
+  left: 850px; 
+  opacity: 0.25;  
+}
+
+.bara-button img {
+  display: block;          
+  width: 40px;    
+  top: 200px;  
 }
 
 audio{
