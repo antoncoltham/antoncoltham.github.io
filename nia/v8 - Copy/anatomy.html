@@ -1,0 +1,96 @@
+<!doctype html>
+<!--Nia: nia.pinto@solwaycollege.school.nz-->
+<html id="anatomy" lang="en" class="notranslate" translate="no">
+	<head>
+		<title>Capybara Website</title>
+		<link rel="stylesheet" href="layout.css">
+		<meta name="description" content="The wonderfully entertaining facts about capybara; an appreciation website.">
+		<meta name="keywords" content="Capybara facts">
+		<meta name="google" content="notranslate" >
+	</head>
+
+	<body>
+		  <div class="masking-container">
+			<h1 class="masked-text">Keeping Up With The Capys</h1>
+		  </div>
+​
+		  <section>
+<!--				<div class="fax">
+					<img src="images/fax.png" alt="Cool Fax">
+					</div> -->
+<!-- ####################################################################### -->
+					<div class="fax">
+					  <img src="images/fax.png" alt="Cool Fax" id="faxImage">
+					</div>
+
+					<!-- Popup Modal -->
+					<div id="faxModal" class="modal">
+					  <span class="close">&times;</span>
+					  <img class="modal-content" id="faxPopup">
+					</div>
+
+					<script>
+					  // Get elements
+					  const faxImg = document.getElementById("faxImage");
+					  const modal = document.getElementById("faxModal");
+					  const modalImg = document.getElementById("faxPopup");
+					  const closeBtn = document.querySelector(".close");
+
+					  // When the image is clicked
+					  faxImg.onclick = function() {
+						modal.style.display = "block";
+						modalImg.src = this.src;
+					  }
+
+					  // When the close button is clicked
+					  closeBtn.onclick = function() {
+						modal.style.display = "none";
+					  }
+
+					  // Close modal when clicking outside the image
+					  window.onclick = function(event) {
+						if (event.target == modal) {
+						  modal.style.display = "none";
+						}
+					  }
+					</script>
+
+<!-- ####################################################################### -->
+
+
+
+
+
+
+				<div class="croc">
+					<div class="speech right">
+					  <p>My friend the crocodile has a capybara baby subscription. </p>
+					</div>
+					
+
+				</div>				
+				<div class="capybara sunglasses">
+					<div class="speech left">
+					  We capybaras aren't that good of parents, we sacrifice our children to crocodiles in case of an attack.<br>
+					  Anyway, thanks for following that capy. I was just bored. Oh you might wanna check out the next page...
+
+					</div>
+					<img src="images/coolio_capy.png" alt="Cool Capybara">
+				</div>
+				<!-- Home Button -->
+				<div class="home"><a href="index.html">🏠</a>    Anatomy</div>
+				<!-- TODO: Make the links look cooler -->
+
+				<!-- Navigation Arrow -->
+				<button class="next-button" onclick="window.location.href='bonus_page.html'">👉</button>
+				<button class="back-button" onclick="window.location.href='habitats.html'">👈</button>
+
+				<br>
+				<br>
+				
+				<br>
+				<br>
+				<br>
+		</section>
+	</body>	 
+</html>

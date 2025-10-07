@@ -1,0 +1,438 @@
+html{
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 50px;
+  width: 700px;
+  margin: auto;
+}
+
+
+.masked-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+    background-size: 200%; /* Enlarged for smooth animation */
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+	
+#index section {
+	background-image: url("images/river_croc_1.png");
+	background-size: cover;
+	height: 400px;
+	width: 800px;
+}
+
+#habits section {
+	background-image: url("images/river_croc2.png");
+	background-size: cover;
+	height: 400px;
+	width: 800px;
+	
+}
+
+#habitats section {
+	background-image: url("images/river_croc3.png");
+	background-size: cover;
+	height: 400px;
+	width: 800px;
+}
+
+#anatomy section {
+	background-image: url("images/river_croc4.png");
+	background-size: cover;
+	height: 400px;
+	width: 800px;
+}
+
+#bonus_page section {
+	background-image: url("images/capy_maze.png");
+	background-size: cover;
+	height: 400px;
+	width: 800px;
+}
+
+/* Home Button */
+.home {
+  font-size: 26px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 2;
+  color: Orange;
+}
+
+
+
+/* Capybara Characters */
+.capybara, .croc {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dancing img {
+	width: 850px;
+}
+
+.capybara img {
+  width: 200px;
+}
+
+.sunglasses {
+  left: 0px;
+  bottom: 50px;
+}
+
+.jaguar img {
+    width: 100px;
+}
+
+.jaguar {
+position: relative;
+left: 50px;
+top: 180px;
+}
+
+.friends img {
+	width: 197px;
+}
+
+.friends {
+  left: 0px;
+  bottom: 50px;
+}
+
+.fax img {
+	width: 300px;
+}
+
+.fax {
+position: relative;
+left: 50px;
+top: 100px;
+}
+
+/* Speech Bubbles */
+#index .speech {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  border: 2px solid red;
+  width: 200px;
+  font-size: 14px;
+  position: relative;
+}
+
+#habitats .speech {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  border: 2px solid red;
+  width: 200px;
+  font-size: 14px;
+  position: relative;
+}
+
+#habits .speech {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  border: 2px solid red;
+  width: 200px;
+  font-size: 14px;
+  position: relative;
+}
+
+#anatomy .speech {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  border: 2px solid red;
+  width: 200px;
+  font-size: 14px;
+  position: relative;
+}
+
+#bonus_page .speech {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  border: 2px solid red;
+  width: 200px;
+  font-size: 14px;
+  position: relative;
+}
+
+#index .speech.left {
+  left: 90px;
+  top: 0px;
+}
+
+#index .speech.right {
+  left: 350px;
+  top: 70px;
+  width: 200px;
+  height: 160px
+}
+
+#habitats .speech.left {
+  left: 90px;
+  top: 0px;
+}
+
+#habitats .speech.right {
+  left: 350px;
+  top: 70px;
+  width: 400px;
+}
+
+#habits .speech.left {
+  left: 90px;
+  top: 0px;
+}
+
+
+#habits .speech.right {
+  left: 350px;
+  bottom: 70px;
+  width: 400px;
+}
+
+#anatomy .speech.left {
+  left: 90px;
+  top: 0px;
+}
+
+#anatomy .speech.right {
+  left: 560px;
+  top: 1px;
+  width: 200px;
+}
+
+#bonus_page .speech.left {
+  left: 90px;
+  top: 0px;
+}
+
+#habits .speech.middle {
+	left: 10px;
+  bottom: 9px;
+  width: 295px;
+}
+
+
+#index .speech.left::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 90px;
+  border: 10px solid transparent;
+  border-top-color: red;
+}
+
+#habits .speech.left::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 104px;
+  border: 10px solid transparent;
+  border-top-color: red;
+}
+
+#habitats .speech.left::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 89px;
+  border: 10px solid transparent;
+  border-top-color: red;
+}
+
+#anatomy .speech.left::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 152px;
+  border: 10px solid transparent;
+  border-top-color: red;
+}
+
+#bonus_page .speech.left::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 90px;
+  border: 10px solid transparent;
+  border-top-color: red;
+}
+
+#index .speech.right::before {
+  content: '';
+  position: absolute;
+  right: 25px;
+  top: 185px;
+  border: 10px solid transparent;
+  border-top-color: red;
+}
+
+#habitats .speech.right::before {
+  content: '';
+  position: absolute;
+  right: 75px;
+  top: 180px;
+  border: 10px solid transparent;
+  border-top-color: red;
+}
+
+#habits .speech.right::before {
+  content: '';
+  position: absolute;
+  right: 160px;
+  top: 100px;
+  border: 10px solid transparent;
+  border-top-color: red;
+}
+
+
+#anatomy .speech.right::before {
+  content: '';
+  position: absolute;
+  right: 9px;
+  top: 86px;
+  border: 10px solid transparent;
+  border-top-color: red;
+}
+
+#habits .speech.middle::before {
+  content: '';
+  position: absolute;
+  left: 85px;
+  top: 72px;
+  border: 10px solid transparent;
+  border-top-color: red;
+}
+
+/* Navigation Arrow Button */
+.next-button {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: white;
+    font-size: 28px;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+.back-button {
+    position: absolute;
+    right: 1270px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: white;
+    font-size: 28px;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.bara-button {
+  background: none;        
+  border: none;            
+  padding: 0;              
+  cursor: pointer;   
+  position: absolute;
+  top: 370px;
+  left: 850px; 
+  opacity: 0.25;  
+}
+
+.bara-button img {
+  display: block;          
+  width: 40px;    
+  top: 200px;  
+}
+
+audio{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+
+/* Popup Modal Styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 10; 
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8); 
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #ff5555;
+}
+
+/* Optional: make the cursor change on hover */
+.fax img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.fax img:hover {
+  transform: scale(1.05);
+}
