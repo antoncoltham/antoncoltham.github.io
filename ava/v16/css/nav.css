@@ -1,0 +1,139 @@
+/*--------------------NAV---------------------*/
+
+/* Main nav container: fixed position on the page */
+#nav-container {
+    position: fixed;
+    top: 40px;
+    left: 10px;
+    z-index: 100;
+}
+
+/* Add margin to inner divs in nav */
+#nav-container div {
+    margin: 20px;
+}
+
+/* Dropdown menu wrapper */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content: hidden by default, absolute position */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 130%;
+}
+
+/* Dropdown links: style and font */
+.dropdown-content a {
+    color: #FFE81F;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 22px;
+    font-family: Gothic A1;
+}
+
+/* Highlight active link in dropdown */
+.dropdown-content a.active {
+    background-color: #6baaf77c;
+    border-radius: 10px;
+}
+
+/* Highlight link on hover in dropdown */
+.dropdown-content a:hover {
+    background-color: #6baaf77c;
+    border-radius: 10px;
+}
+
+/* Hamburger (lightsaber) icon styling */
+.toggle-icon {
+    display: block;
+    position: relative;
+    width: auto;
+    margin: -2.2em auto 0 0.2em;
+    -webkit-transition: margin 600ms;
+    -moz-transition: margin 600ms;
+    transition: margin 600ms;
+    cursor: pointer;
+}
+
+/* Hamburger bars styling */
+.toggle-icon .bar {
+    display: block;
+    width: 3.8em;
+    height: 0.2em;
+    margin: 0.9em;
+    border-right: 2.8em solid #fff;
+    border-left: 0.6em solid #b7b7b7;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: -webkit-transform, margin, border-right-color, box-shadow;
+    -moz-transition-property: -moz-transform, margin, border-right-color, box-shadow;
+    transition-property: transform, margin, border-right-color, box-shadow;
+    -webkit-transition-duration: 600ms;
+    -moz-transition-duration: 600ms;
+    transition-duration: 600ms;
+}
+
+/* First bar transition */
+.toggle-icon .bar:nth-of-type(1) {
+    -webkit-transition: opacity 300ms;
+    -moz-transition: opacity 300ms;
+    transition: opacity 300ms;
+}
+
+/* Second bar initial rotation */
+.toggle-icon .bar:nth-of-type(2) {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+/*-----------Pushed (active) hamburger animation-----------*/
+.toggle-icon.pushed {
+    margin: -3.2em 0 0 0.7em;
+}
+
+/* Hide first bar when pushed */
+.toggle-icon.pushed .bar:nth-of-type(1) {
+    opacity: 0;
+}
+
+/* Animate second bar when pushed */
+.toggle-icon.pushed .bar:nth-of-type(2) {
+    margin-left: 1.4em;
+    -webkit-transform: rotate(-137deg) translateY(-1.5em);
+    -moz-transform: rotate(-137deg) translateY(-1.5em);
+    -ms-transform: rotate(-137deg) translateY(-1.5em);
+    -o-transform: rotate(-137deg) translateY(-1.5em);
+    transform: rotate(-137deg) translateY(-1.5em);
+}
+
+/* Animate third bar when pushed */
+.toggle-icon.pushed .bar:nth-of-type(3) {
+    margin-left: 0.5em;
+    -webkit-transform: rotate(-42deg);
+    -moz-transform: rotate(-42deg);
+    -ms-transform: rotate(-42deg);
+    -o-transform: rotate(-42deg);
+    transform: rotate(-42deg);
+}
+
+/* Red saber color for second bar when pushed */
+.toggle-icon.pushed .bar:nth-of-type(2) {
+    border-right-color: #e79193;
+    box-shadow: 0.4em 0 0.6em 0.1em rgba(225, 24, 27, 0.75);
+}
+
+/* Blue saber color for third bar when pushed */
+.toggle-icon.pushed .bar:nth-of-type(3) {
+    border-right-color: #96d0f6;
+    box-shadow: 0.4em 0 0.6em 0.1em rgba(28, 114, 213, 0.75);
+}
