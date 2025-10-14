@@ -268,9 +268,9 @@ section {
 
 /* ========== NAVIGATION ARROW BUTTONS ========== */
 .next-button {
-  position: absolute;
-  right: 155px;
-  top: 30%;
+  position: relative;
+  right: -808px;
+  top: 137px;
   transform: translateY(-50%);
   background-color: black;
   color: white;
@@ -283,10 +283,11 @@ section {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
+
 .back-button {
-  position: absolute;
-  right: 1050px;
-  top: 25%;
+  position: relative;
+  left: -131px;
+  top: 137px;
   transform: translateY(-50%);
   background-color: black;
   color: white;

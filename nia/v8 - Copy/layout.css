@@ -41,33 +41,28 @@ body {
 	width: 800px;
 }
 
-#habits section {
-	background-image: url("images/river_croc2.png");
+section {
 	background-size: cover;
 	height: 400px;
 	width: 800px;
 	
 }
 
+#habits section {
+	background-image: url("images/river_croc2.png");
+	
+}
+
 #habitats section {
 	background-image: url("images/river_croc3.png");
-	background-size: cover;
-	height: 400px;
-	width: 800px;
 }
 
 #anatomy section {
 	background-image: url("images/river_croc4.png");
-	background-size: cover;
-	height: 400px;
-	width: 800px;
 }
 
 #bonus_page section {
 	background-image: url("images/capy_maze.png");
-	background-size: cover;
-	height: 400px;
-	width: 800px;
 }
 
 /* Home Button */
@@ -134,47 +129,7 @@ top: 100px;
 }
 
 /* Speech Bubbles */
-#index .speech {
-  background: white;
-  border-radius: 10px;
-  padding: 12px;
-  border: 2px solid red;
-  width: 200px;
-  font-size: 14px;
-  position: relative;
-}
-
-#habitats .speech {
-  background: white;
-  border-radius: 10px;
-  padding: 12px;
-  border: 2px solid red;
-  width: 200px;
-  font-size: 14px;
-  position: relative;
-}
-
-#habits .speech {
-  background: white;
-  border-radius: 10px;
-  padding: 12px;
-  border: 2px solid red;
-  width: 200px;
-  font-size: 14px;
-  position: relative;
-}
-
-#anatomy .speech {
-  background: white;
-  border-radius: 10px;
-  padding: 12px;
-  border: 2px solid red;
-  width: 200px;
-  font-size: 14px;
-  position: relative;
-}
-
-#bonus_page .speech {
+.speech {
   background: white;
   border-radius: 10px;
   padding: 12px;
