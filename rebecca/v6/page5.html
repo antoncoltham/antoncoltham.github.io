@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="layout.css">
+  <title>Page 5 - Severance Comic</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <div class="content pagefive">
+    <div class="speech-bubble">
+      “In Severance, an "innie" is the part of a person's consciousness that exists only at work, having no memories or awareness of their life outside the office. Their "outie" counterpart, living outside of work, has no knowledge of the innie's experiences. Innies are essentially blank slates with limited knowledge, confined to Lumon Industries and experiencing a life devoid of context or personal history, relying on the outie's decision to be severed to escape pain or difficult emotions.  ”
+    </div>
+  </div>
+
+  <button id="leftButton" class="arrow-btn">←</button>
+  <button id="rightButton" class="arrow-btn">→</button>
+
+  <script>
+    const pages = ['index.html', 'page2.html', 'page3.html', 'page4.html', 'page5.html'];
+    const currentPage = window.location.pathname.split("/").pop();
+    function navigate(offset) {
+      const currentIndex = pages.indexOf(currentPage);
+      if (currentIndex === -1) return;
+      let newIndex = (currentIndex + offset) % pages.length;
+      if (newIndex < 0) newIndex += pages.length;
+      window.location.href = pages[newIndex];
+    }
+    document.getElementById('leftButton').addEventListener('click', () => navigate(-1));
+    document.getElementById('rightButton').addEventListener('click', () => navigate(1));
+  </script>
+
+</body>
+</html>

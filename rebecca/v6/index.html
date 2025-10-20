@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="layout.css">
+  <title>Severance website - Page 1</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div class="language-selector">🌐</div>
+  <div class="language-options">
+    <button data-lang="en">English</button>
+    <button data-lang="fr">Français</button>
+    <button data-lang="mi">Māori</button>
+    <button data-lang="es">Español</button>
+    <button data-lang="de">Deutsch</button>
+    <button data-lang="ja">日本語</button>
+    <button data-lang="ko">한국어</button>
+    <button data-lang="it">Italiano</button>
+  </div>
+
+  <h1 id="title">Welcome to the world of Severance</h1>
+  <p id="description">A brief introduction to the 2 season show</p>
+  <button id="dontClick">Don't Click Me!</button>
+
+  <button id="leftButton" class="arrow-btn">←</button>
+  <button id="rightButton" class="arrow-btn">→</button>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Welcome to the world of Severance",
+        description: "The show that is now boring",
+        button: "Don't Click Me!",
+        why: "why"
+      },
+      fr: {
+        title: "Bienvenue dans le monde de Severance",
+        description: "L'émission qui est maintenant ennuyeuse",
+        button: "Ne cliquez pas sur moi !",
+        lol: "lol"
+      },
+      mi: {
+        title: "Nau mai ki te ao o Severance",
+        description: "Kua hōhā te whakaaturanga ināianei",
+        button: "Kaua e pāwhiri i ahau!",
+        lol: "lol"
+      },
+      es: {
+        title: "Bienvenido al mundo de Severance",
+        description: "El programa que ahora es aburrido",
+        button: "¡No me hagas clic!",
+        lol: "lol"
+      },
+      de: {
+        title: "Willkommen in der Welt von Severance",
+        description: "Die Sendung ist jetzt langweilig",
+        button: "Klick mich nicht an!",
+        idiot: "idiot"
+      },
+      ja: {
+        title: "セヴェランスの世界へようこそ",
+        description: "今や退屈な番組です",
+        button: "クリックしないで！",
+        lol: "バカ"
+      },
+      ko: {
+        title: "세버런스의 세계에 오신 것을 환영합니다",
+        description: "이제 지루한 쇼입니다",
+        button: "누르지 마세요!",
+        lol: "바보"
+      },
+      it: {
+        title: "Benvenuto nel mondo di Severance",
+        description: "Lo show che ormai è noioso",
+        button: "Non cliccarmi!",
+        lol: "lol"
+      }
+    };
+
+    const title = document.getElementById("title");
+    const description = document.getElementById("description");
+    const dontClickBtn = document.getElementById("dontClick");
+    const langOptions = document.querySelectorAll(".language-options button");
+    let currentLang = 'en';
+
+    langOptions.forEach(option => {
+      option.addEventListener("click", () => {
+        const lang = option.getAttribute("data-lang");
+        currentLang = lang;
+        title.textContent = translations[lang].title;
+        description.textContent = translations[lang].description;
+        dontClickBtn.textContent = translations[lang].button;
+      });
+    });
+
+    dontClickBtn.addEventListener('click', () => {
+      const word = translations[currentLang].idiot || "why";
+      const newWindow = window.open('', '_blank');
+      newWindow.document.write(`
+        <!DOCTYPE html>
+        <html lang="${currentLang}">
+        <head>
+          <meta charset="UTF-8" />
+          <title>${word}</title>
+          <style>
+            body {
+              height: 100vh;
+              margin: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: #141E30;
+              color: #4ade80;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-size: 4rem;
+              user-select: none;
+            }
+          </style>
+        </head>
+        <body>${word}</body>
+        </html>
+      `);
+      newWindow.document.close();
+    });
+
+    // Navigation loop setup
+    const pages = ['index.html', 'page2.html', 'page3.html', 'page4.html', 'page5.html'];
+    const currentPage = 'index.html'; // this file name
+
+    function navigate(offset) {
+      const currentIndex = pages.indexOf(currentPage);
+      let newIndex = (currentIndex + offset) % pages.length;
+      if (newIndex < 0) newIndex += pages.length;
+      window.location.href = pages[newIndex];
+    }
+
+    document.getElementById('leftButton').addEventListener('click', () => navigate(-1));
+    document.getElementById('rightButton').addEventListener('click', () => navigate(1));
+  </script>
+</body>
+</html>
+

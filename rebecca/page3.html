@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="layout.css">
+  <title>Page 3 - Severance Dialogue</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <div class="content page3">
+    <div class="speech-box">
+      “I am Keir, the great and mighty. I formed lumon from blood and dust. Only those who have the light of keir are worthy.”
+    </div>
+  </div>
+
+
+  <button id="leftButton" class="arrow-btn">←</button>
+  <button id="rightButton" class="arrow-btn">→</button>
+
+  <script>
+    const pages = ['index.html', 'page2.html', 'page3.html', 'page4.html', 'page5.html'];
+    const currentPage = window.location.pathname.split("/").pop();
+    function navigate(offset) {
+      const currentIndex = pages.indexOf(currentPage);
+      if (currentIndex === -1) return;
+      let newIndex = (currentIndex + offset) % pages.length;
+      if (newIndex < 0) newIndex += pages.length;
+      window.location.href = pages[newIndex];
+    }
+    document.getElementById('leftButton').addEventListener('click', () => navigate(-1));
+    document.getElementById('rightButton').addEventListener('click', () => navigate(1));
+  </script>
+
+</body>
+</html>

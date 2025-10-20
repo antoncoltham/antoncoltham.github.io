@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cool Animated Website - Page 1</title>
+  <style>
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #007491;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 20px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      animation: fadeIn 3s ease forwards;
+      animation-delay: 1s;
+      opacity: 0;
+    }
+
+    button#dontClick {
+      margin-top: 40px;
+      padding: 15px 40px;
+      font-size: 1.25rem;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      background: white;
+      color: #007491;
+      font-weight: bold;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      animation: bounce 2s infinite;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    button#dontClick:hover {
+      background: #005f73;
+      color: white;
+      box-shadow: 0 12px 25px rgba(0, 95, 115, 0.7);
+    }
+
+    /* Left and right navigation buttons */
+    .nav-arrow {
+      position: absolute;
+      bottom: 40px;
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      border-radius: 50px;
+      background-color: white;
+      color: #007491;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      animation: bounce 3s infinite;
+      transition: background 0.3s, color 0.3s;
+      user-select: none;
+    }
+    #leftButton {
+      left: 40px;
+    }
+    #leftButton:hover {
+      background-color: #005f73;
+      color: white;
+    }
+    #rightButton {
+      right: 40px;
+    }
+    #rightButton:hover {
+      background-color: #005f73;
+      color: white;
+    }
+
+    /* Language selector */
+    .language-selector {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #007491;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      user-select: none;
+    }
+
+    .language-options {
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      background: #005f73;
+      border-radius: 10px;
+      padding: 10px;
+      z-index: 9;
+    }
+
+    .language-options button {
+      background: transparent;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      cursor: pointer;
+      text-align: left;
+      transition: color 0.3s;
+      font-size: 1rem;
+    }
+
+    .language-options button:hover {
+      color: #facc15;
+    }
+
+    .language-selector:hover + .language-options,
+    .language-options:hover {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-selector">🌐</div>
+  <div class="language-options">
+    <button data-lang="en">English</button>
+    <button data-lang="fr">Français</button>
+    <button data-lang="mi">Māori</button>
+    <button data-lang="es">Español</button>
+    <button data-lang="de">Deutsch</button>
+    <button data-lang="ja">日本語</button>
+    <button data-lang="ko">한국어</button>
+    <button data-lang="it">Italiano</button>
+  </div>
+
+  <h1 id="title">Welcome to the world of Severance</h1>
+  <p id="description">The show that is now boring</p>
+  <button id="dontClick">Don't Click Me!</button>
+
+  <button id="leftButton" class="nav-arrow">⬅️</button>
+  <button id="rightButton" class="nav-arrow">➡️</button>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Welcome to the world of Severance",
+        description: "The show that is now boring",
+        button: "Don't Click Me!",
+        idiot: "idiot"
+      },
+      fr: {
+        title: "Bienvenue dans le monde de Severance",
+        description: "L'émission qui est maintenant ennuyeuse",
+        button: "Ne cliquez pas sur moi !",
+        idiot: "idiot"
+      },
+      mi: {
+        title: "Nau mai ki te ao o Severance",
+        description: "Kua hōhā te whakaaturanga ināianei",
+        button: "Kaua e pāwhiri i ahau!",
+        idiot: "he mōrikarika koe"
+      },
+      es: {
+        title: "Bienvenido al mundo de Severance",
+        description: "El programa que ahora es aburrido",
+        button: "¡No me hagas clic!",
+        idiot: "idiota"
+      },
+      de: {
+        title: "Willkommen in der Welt von Severance",
+        description: "Die Sendung ist jetzt langweilig",
+        button: "Klick mich nicht an!",
+        idiot: "idiot"
+      },
+      ja: {
+        title: "セヴェランスの世界へようこそ",
+        description: "今や退屈な番組です",
+        button: "クリックしないで！",
+        idiot: "バカ"
+      },
+      ko: {
+        title: "세버런스의 세계에 오신 것을 환영합니다",
+        description: "이제 지루한 쇼입니다",
+        button: "누르지 마세요!",
+        idiot: "바보"
+      },
+      it: {
+        title: "Benvenuto nel mondo di Severance",
+        description: "Lo show che ormai è noioso",
+        button: "Non cliccarmi!",
+        idiot: "idiota"
+      }
+    };
+
+    const title = document.getElementById("title");
+    const description = document.getElementById("description");
+    const dontClickBtn = document.getElementById("dontClick");
+    const langOptions = document.querySelectorAll(".language-options button");
+    let currentLang = 'en';
+
+    langOptions.forEach(option => {
+      option.addEventListener("click", () => {
+        const lang = option.getAttribute("data-lang");
+        currentLang = lang;
+        title.textContent = translations[lang].title;
+        description.textContent = translations[lang].description;
+        dontClickBtn.textContent = translations[lang].button;
+      });
+    });
+
+    dontClickBtn.addEventListener('click', () => {
+      const word = translations[currentLang].idiot || "idiot";
+      const newWindow = window.open('', '_blank');
+      newWindow.document.write(`
+        <!DOCTYPE html>
+        <html lang="${currentLang}">
+        <head>
+          <meta charset="UTF-8" />
+          <title>${word}</title>
+          <style>
+            body {
+              height: 100vh;
+              margin: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: #141E30;
+              color: #4ade80;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-size: 4rem;
+              user-select: none;
+            }
+          </style>
+        </head>
+        <body>${word}</body>
+        </html>
+      `);
+      newWindow.document.close();
+    });
+
+    // Navigation loop setup
+    const pages = ['index.html', 'page2.html', 'page3.html', 'page4.html', 'page5.html'];
+    const currentPage = 'index.html'; // this file name
+
+    function navigate(offset) {
+      const currentIndex = pages.indexOf(currentPage);
+      let newIndex = (currentIndex + offset) % pages.length;
+      if (newIndex < 0) newIndex += pages.length;
+      window.location.href = pages[newIndex];
+    }
+
+    document.getElementById('leftButton').addEventListener('click', () => navigate(-1));
+    document.getElementById('rightButton').addEventListener('click', () => navigate(1));
+  </script>
+</body>
+</html>
