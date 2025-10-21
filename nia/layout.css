@@ -200,23 +200,23 @@ section {
 /* Right-positioned bubbles (page specific adjustments) */
 #index .speech.right {
   left: 350px;
-  top: 70px;
+  top: 8px;
   width: 200px;
   height: 160px;
 }
 #habitats .speech.right {
   left: 350px;
-  top: 70px;
+  top: 14px;
   width: 400px;
 }
 #habits .speech.right {
   left: 350px;
-  bottom: 70px;
+  bottom: 83px;
   width: 400px;
 }
 #anatomy .speech.right {
   left: 560px;
-  top: 1px;
+  top: -59px;
   width: 200px;
 }
 
