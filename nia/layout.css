@@ -18,6 +18,11 @@ h1 {
 h2.hidden {
 	display: none;
 }
+
+.bara-button img {
+  visibility:hidden;
+}
+
 /* ========== POPUP MODAL STYLES (Used on Anatomy Page) ========== */
 .modal {
   /* Hidden by default until triggered */
